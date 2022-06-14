@@ -1,0 +1,110 @@
+.container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:5px;
+}
+.insideContainer{
+    width: 90%;
+    height:max-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+.itemFrame{
+    display: flex;
+    border-radius: 5px;
+    width: 120px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    
+}
+.item{
+    width: 116px;
+    height: 196px;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    display: flex;
+    transition: transform .75s;
+    box-shadow: 1px 2px rgba(0,0,0,0.2);
+}
+.item:hover{
+    transform: scaleX(-1);
+    box-shadow: 1px 2px rgba(0,0,0,0.2);
+}
+.dummy{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    background-color: aqua;
+}
+.button{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border-width: 2px;
+    display: flex;
+    border-width: thin;
+    border-color: black;
+    display: flex;
+    font-weight:600;
+    color: #6E2798;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    word-wrap: break-word;
+    background-color: rgba(0,0,0,0.1);
+}
+.button:hover{
+    transform: scaleX(-1);
+    box-shadow: 1px 2px rgba(0,0,0,0.2);
+}
+.img{
+    width: 80%;
+    margin-top: 10%;
+}
+.label{
+    font-weight:600;
+    color: #6E2798;
+}
+.searchFrame{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.searchicon{
+    margin-left: 10px;
+}
+.icon{
+    color: #fc9c1c;
+}
+.inputs{
+    color: black;
+    font-weight: bold;
+    font-size:small;
+    height: 85%;
+    max-height: 50px;
+    aspect-ratio: 6;
+    max-width: 50%;
+    min-width: 80%;
+    background-color: rgba(0,0,0,0.05);
+    border-width: 2px;
+    border-color:#fc9c1c;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.cardLabel{
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    word-wrap: break-word;
+}

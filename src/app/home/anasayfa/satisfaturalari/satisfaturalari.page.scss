@@ -1,0 +1,218 @@
+.bottomFrame{
+    width: 100%;
+    position:absolute;
+    bottom: 0%;
+    height: 51px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.addIcon{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.addButton{
+    width: 65%;
+    height: 40px;
+    font-size: small;
+    font-weight: bold;
+    --background: #6E2798;
+}
+.searchInputFrame{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+}
+.container{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    transition: 0.5s;
+}
+.outsideFrame{
+    position: relative;
+    background-color: rgba(0,0,0,0.1);
+    border-style: solid;
+    border-color: #fc9c1c;
+    border-width: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    height: fit-content;
+    width: 98%;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+// .outsideFrame:hover .leftFrame{
+//     background-color: transparent;
+// }
+// .outsideFrame:hover .fisNo{
+//     color: #6E2798;
+// }
+.leftFrame{
+    position: relative;
+    height: 100%;
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-width: 0px;
+    align-items: center;
+    background-color: #6E2798;
+    border-right-width: 1px;
+    font-size: xx-large;
+    color: #fc9c1c;
+}
+.fisNo{
+    font-weight: bold;
+    font-size: small;
+    writing-mode: vertical-rl;
+    color:#fc9c1c;
+}
+.rightFrame{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    border-color: #fc9c1c;
+    color:  #6E2798;
+}
+.outsideFrame:hover  .rightFrame {
+    background-color: #6E2798;
+    color: #fc9c1c;
+}
+.outsideFrame:hover > .selectionMenu {
+    width: 88%;
+    transition: 0.5s;
+    opacity: 1;
+}
+.middleFrame{
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fisInfoFrame{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.topFrame{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.insideFrames{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: solid;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-color: #6E2798;
+    word-wrap: break-word;
+    flex-direction: column;
+    gap:2px;
+    height: 70%;
+}
+.baslik{
+    font-size: small;
+}
+.icerik{
+    
+    font-size: small;
+    font-weight: bold;
+}
+.cariAd{
+    transition: 0.5s;
+    font-weight: bolder;
+    color: #6E2798;
+    font-size: medium;
+}
+.tarih{
+    font-weight: bold;
+    font-size: small;
+
+}
+.insideFrame{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+}
+// .selectionMenu{
+//     justify-content: flex-end;
+//     align-items: flex-end;
+//     opacity: 0;
+//     height: 0px;
+//     width: 100%;
+//     background-color: #6E2798;
+//     display: flex;
+//     flex-direction: row;
+//     transition: 0.5;
+// }
+.selection{
+    height: 100%;
+    border-style: solid;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-color:rgba(255,255,255,0.5);
+    flex: 0.7;
+    display: flex;
+    font-size: x-large;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    color: white;
+}
+.selectionMenu:has(.selection:hover){
+    background-color: #fc9c1c;
+}
+.selectionIcons{
+    height: 50%;
+    display: flex;
+    color: white;
+    font-size: x-large;
+    transition: 0.5s;
+}
+.selectionLabels{
+    display: flex;
+    color: white;
+    font-size: small;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+.selectionMenu{
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    opacity: 0;
+    width: 0%;
+    height: 80%;
+    background-color: #6E2798;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5;
+}

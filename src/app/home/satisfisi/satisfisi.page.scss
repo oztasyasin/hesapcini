@@ -1,0 +1,494 @@
+.musteriFrame{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    color:#6E2798;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-style: solid;
+    border-width: 0ch;
+    border-bottom-width: 2px;
+    border-color: #fc9c1c;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.iconFrame{
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:75px;
+
+}
+.inputFrame{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customerSelect{
+    --background: #6E2798;
+    width: 90%;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    text-transform: none;
+}
+.inputsFrame{
+    width: 90%;
+    margin: auto;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:5px;
+    margin-top: 20px;
+}
+.inputss{
+    color: black;
+    font-weight: bold;
+    font-size:small;
+    height: 45px;
+    aspect-ratio: 4;
+    background-color: rgba(0,0,0,0.05);
+    border-width: 2px;
+    border-color:#fc9c1c;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.input{
+    color: black;
+    font-weight: bold;
+    font-size:small;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #fc9c1c;
+    border-width: 0ch;
+    border-width: 1px;
+    display: flex;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+}
+.fullSizeRow{
+    width: 49%;
+    height: 50px;
+    font-size: small;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.inputLabel{
+    position: absolute;
+    top: -5px;
+    background-color: white;
+    left: 5px;
+    color: #6E2798;
+}
+.inputIcons{
+    position: absolute;
+    font-size: x-large;
+    right: 5px;
+    color: #6E2798;
+}
+.urunEkleButon{
+    margin-top: 10px;
+    margin-left: 5%;
+    --background: #6E2798;
+    width: 90%;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    text-transform: none;
+}
+.buttonIcon{
+    font-size: x-large;
+}
+.buttonFrame{
+    position: relative;
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 1px;
+    border-color: #fc9c1c;
+    margin-top: 10px;
+    width: 100%;
+    height: 70px;
+}
+.taksitlerFrame{
+    
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 1px;
+    border-color: #fc9c1c;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.segment{
+    color: #fc9c1c;
+    text-transform: none;
+    font-size: small;
+    font-weight: bold;
+}
+::part(indicator-background) {
+    background-color: #6E2798;
+  }
+
+.taksitlerFrame{
+    display: flex;
+    flex-direction: column;
+}
+.toplamFrame{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: bold;
+    flex-direction: row;
+}
+.descriptionFrame{
+    width: 60%;
+    border-style: solid;
+    border-width: 1px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right-width: 0px;
+    border-color: #6E2798;
+}
+.toplamLabels{
+    color: #6E2798;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 5px;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+.totalFrame{
+    width: 10%;
+    border-style: solid;
+    border-width: 1px;
+    border-left-width: 0px;
+    height: fit-content;
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: #6E2798;
+}
+.urunFrame{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+}
+.urunButton{
+    position: relative;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fc9c1c;
+}
+.outFrame{
+    justify-content:right;
+    align-items: flex-end;
+    position: relative;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    width: 90%;
+
+}
+.buttonParts{
+    margin: auto;
+    position: relative;
+    flex: 1;
+    height: 60%;
+    display: flex;
+    border-style: solid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-color: #6E2798;
+}
+.urunImageFrame{
+    margin-top: 20px;
+    height:70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+.urunImg{
+    height: 50px;
+    width: 50px;
+}
+.urunTitleLabel{
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    height: fit-content;
+    font-size: small;
+    font-weight: 400;
+    text-transform: none;
+    color: black;
+}
+.urunInfoLabel{
+    font-size: small;
+    font-weight:100;
+    text-transform: none;
+    color: black;
+    font-weight: bold;
+}
+.removeIconFrame{
+    display: flex;
+    aspect-ratio: 0.4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+    color: red;
+}
+.urunTitle{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    text-transform: none;
+    color: #6E2798;
+    font-size: small;
+    font-weight: bold;
+    width: fit-content;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+.taksitFrame{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:5px;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: #fc9c1c;
+}
+.taksitItemFrame{
+    overflow: hidden;
+    position: relative;
+    height: 120px;
+    width: 80%;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    box-shadow: 0px 1px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.taksitLabel{
+    margin: 0;
+    font-size: small;
+    font-weight: bold;
+    color: black;
+    border-style: solid;
+    border-width: 0ch;
+    border-bottom-width: 1px;
+    border-color: #6E2798;
+    width: 90%;
+    border-color: rgba(0,0,0,0.1);
+}
+.taksitButtons{
+    width: 90%;
+    flex:1;
+}
+.optionsFrame{
+    height: 100%;
+    width: 10%;
+    background-color: #fc9c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+.optionsMenu{
+    height: 100%;
+    width: 90%;
+    bottom: 0px;
+    position: absolute;
+    background-color: #6E2798;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    color: white;
+    transition: 0.5s;
+    display: flex;
+}
+.optionLabels{
+    font-size: small;
+
+}
+.urunAdi{
+    width: 100%;
+    height: fit-content;
+    word-wrap: break-word;
+    text-align: center;
+    background-color: #fc9c1c;
+}
+.indirimFrame{
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    flex-direction: row;
+    text-align: right;
+    display: flex;
+    background-color: rgba(0,0,0,0.1);
+    color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    font-size: small;
+    font-weight: bold;
+    transition: 0.5s;
+    justify-content: right;
+    word-wrap: break-word;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fc9c1c;
+    border-top-width: 0px;
+    border-bottom-width: 0ch;
+
+}
+.indirimFrame:hover{
+    right: 0px;
+}
+.priceIcon{
+    font-size: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    margin: auto;
+}
+.priceIconFrame{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-color: rgba(0,0,0,0.1);
+}
+.priceLabelFrame{
+    flex-direction: column;
+    text-align: right;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+.indirimLine{
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-color: #fc9c1c;
+    margin: auto;
+}
+.indirimSwitch{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    color: #6E2798;
+    border-radius: 5px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.indirimSwitch:hover .indirimFrame{
+    background-color: #fc9c1c;
+}
+.indirimLabel{
+    position: relative;
+    height: 100%;
+    word-wrap: break-word;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+}
+.labelDiv{
+    width:60%;
+    margin: auto;
+    word-wrap: break-word;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.remove{
+    color: red;
+    font-size:medium;
+    margin: auto;
+}
+//style="background-color:red;margin: auto;"
+

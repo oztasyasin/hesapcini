@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="195px" height="195px" viewBox="0 0 195 195" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>ikon3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-589.000000, -1127.000000)">
+            <g id="ikon3" transform="translate(594.000000, 1132.000000)">
+                <g id="Group-19" transform="translate(52.000000, 37.000000)" fill="#6E2798">
+                    <g id="Group-23-Copy" transform="translate(0.000000, 0.512195)">
+                        <g id="Group-21">
+                            <path d="M63.6227316,71.3384498 L63.6227316,80.4878049 L0,80.4878049 L0,0 L48.2662133,0 L63.6227316,15.379878 L63.6227316,34.3432314 L56.9256019,34.3432314 L56.9256019,23.4756098 L40.1827778,23.4756098 L40.1827778,6.71067073 L6.69712964,6.71067073 L6.69712964,73.7838415 L56.9256019,73.7838415 L56.9256019,71.3384498 L63.6227316,71.3384498 Z M46.8799075,8.09908537 L46.8799075,16.7682927 L55.5392961,16.7682927 L46.8799075,8.09908537 Z" id="Combined-Shape"></path>
+                            <polygon id="Fill-6" points="13.4314656 44.737889 26.7619427 44.737889 26.7619427 37.971662 13.4314656 37.971662"></polygon>
+                            <polygon id="Fill-7" points="13.3304771 55.4426661 36.5578235 55.4426661 36.5578235 48.6764391 13.3304771 48.6764391"></polygon>
+                            <polygon id="Fill-7-Copy" points="13.3304771 66.1474432 36.5578235 66.1474432 36.5578235 59.3812161 13.3304771 59.3812161"></polygon>
+                        </g>
+                        <polygon id="Indicator" fill-rule="nonzero" points="53.6392724 46.0639562 49.1869919 50.8778781 61.0452333 61.7073171 80.4878049 39.128814 75.4885375 34.8780488 60.4781444 52.3094984"></polygon>
+                    </g>
+                    <path d="M51.7693089,110.585366 L13.4146341,110.585366 L32.5919715,91 L51.7693089,110.585366 Z" id="Combined-Shape" transform="translate(32.591972, 100.792683) rotate(180.000000) translate(-32.591972, -100.792683) "></path>
+                </g>
+                <circle id="Oval" stroke="#FF9E19" stroke-width="10" cx="92.5" cy="92.5" r="92.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

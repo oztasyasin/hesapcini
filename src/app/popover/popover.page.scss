@@ -1,0 +1,29 @@
+.container{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.selectionButton{
+    width: 100%;
+    aspect-ratio: 5;
+    display: flex;
+    align-self: center;
+    position: relative;
+    --color:#ffffff;
+    --background: #6E2798;;
+}
+.selectionLabel{
+    position: absolute;
+    left: 0%;
+    width: 20%;
+}
+.selectionTitle{
+    width: max-content;
+    position: absolute;
+    width: 70%;
+    right: 0%;
+}

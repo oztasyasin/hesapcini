@@ -1,0 +1,24 @@
+<ion-header>
+  <div style="width: 100%;height: 10px;"></div>
+  <div class="searchFrame">
+    <ion-input (input)="textChange($event.target.value)"  class="inputs" placeholder="Bul" type="text">
+      <ion-icon class="searchicon" size="small" name="search"></ion-icon>
+    </ion-input>
+  </div>
+  <div style="width: 100%;height: 10px;"></div>
+</ion-header>
+
+<ion-content>
+  <div class="container" style="margin-top: 7px;">
+      <ng-container  *ngFor="let p of pages ;let i = index">
+        <div class="itemFrame"  *ngFor ="let c of p.children|textfilter:searchInput;let j = index">
+          <div class="item">
+            <button class="button" (click) ="buttonClick(c)">
+              <ion-img class="img" [src]="img" *ngIf="c.activeText==c.title"></ion-img>
+              <ion-label text-wrap>{{c.activeText}}</ion-label>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+  </div>
+</ion-content>

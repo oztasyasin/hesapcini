@@ -1,0 +1,62 @@
+.morYazi{
+    font-weight: bold;
+    font-size: small;
+    color: #444444;
+}
+.turuncuYazi{
+    font-weight: bold;
+    font-size: small;
+    color: #444444;
+}
+.searchFrame{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.searchicon{
+    margin-left: 10px;
+}
+.icon{
+    color: #fc9c1c;
+}
+.inputs{
+    color: black;
+    font-weight: bold;
+    font-size:small;
+    height: 85%;
+    max-height: 50px;
+    aspect-ratio: 6;
+    max-width: 50%;
+    min-width: 80%;
+    background-color: rgba(0,0,0,0.05);
+    border-width: 2px;
+    border-color:#fc9c1c;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+ion-item{
+    height: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    --ion-width: 100%;
+    --background:white;
+}
+ion-menu-toggle{
+    --ion-background-color:transparent;
+}
+ion-list{
+    --background:white;
+    background-color: white;
+}
+ion-thumbnail{
+    height: 40px;
+    width: 40px;
+}
+ion-content{
+    --background:white;
+}

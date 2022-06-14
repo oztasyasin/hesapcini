@@ -1,0 +1,242 @@
+.cLogo{
+    height: 100%;
+}
+.underLogo{
+    width: 80%;
+    margin-right: 10%;
+    height: 90px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    font-size: 70px;
+}
+.userName{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+.logoFrame{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-color: rgba(255,255,255,0.1);
+    background-color: #6E2798;
+    
+}
+.active{
+
+}
+.active-parent{
+    
+}
+ion-thumbnail{
+    height: 40px;
+    width: 40px;
+}
+.morYazi{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size: small;
+    margin-left: 10px;
+    color: #444444;
+}
+.turuncuYazi{
+    font-weight: bold;
+    font-size: small;
+    margin-right: 10px;
+    color: #444444;
+}
+.icon{
+    font-weight: bolder;
+    font-size: large;
+    color: #fc9c1c;
+}
+.navigationLinks{
+    gap:5px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.navigationLink{
+    font-weight:600;
+    color: #6E2798;
+}
+.navigationText{
+    color: #fc9c1c;
+}
+.navigationButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 57px;
+    bottom: 0%;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #112D4E;
+    // background-color: white;
+}
+.navButtons{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    aspect-ratio: 1;
+    
+}
+.icons{
+    
+    color: white;
+}
+.inputs{
+    color: white;
+    font-weight: bold;
+    font-size:small;
+    height: 85%;
+    aspect-ratio: 6;
+    max-width: 50%;
+    min-width: 80%;
+    background-color: rgba(255,255,255,0.3);
+    border-width: 2px;
+    border-color:#fc9c1c;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.searchFrame{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    flex-direction: column;
+}
+.searchicon{
+    color: white;
+    margin-left: 10px;
+}
+.logoYazi{
+    height: 90%;
+    width: 100%;
+}
+.logoo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.navigationButtons1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 1px;
+    border-color: rgba(255,255,255,0.1);
+    background-color: #6E2798;
+}
+.navButtons1{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    border-color: rgba(255,255,255,0.1);
+}
+.personIcon{
+    color: white;
+}
+.logoLeft{
+    height: 100%;
+    aspect-ratio: 1;
+}
+.logoRight{
+    height: 100%;
+}
+
+.imageF{
+    width: 70%;
+    height: 70%;
+}
+ion-app{
+    --ion-background-color:white;
+}
+ion-item{
+    height: 50px;
+    --ion-width: 100%;
+    --ion-background-color:transparent;
+    --background:white;
+}
+ion-menu-toggle{
+    --ion-background-color:transparent;
+}
+.list{
+    background-color:red;
+}
+.logoF{
+    border-radius: 10px;
+    border-style: solid;
+    height: 50%;
+    font-size: xx-large;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
+    border-width: 1px;
+}
+.labelF{
+    height: 50%;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.item-content {
+    background-color:#ffffff;
+}
+.checkBoxFrame{
+    color: white;
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap:10px;
+    height: 40px;
+    align-self: flex-end;
+    margin-right: 5px;
+    text-align: center;
+}
+ion-checkbox{
+    --ion-background-color:transparent;
+    --ion-color:transparent;
+}
+.scroller{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+    flex:1;
+}
+.checkBox{
+    --background:#6E2798;
+    color: #6E2798;
+    background-color: #6E2798;
+    --background-checked:#fc9c1c;
+    --border-color:#fc9c1c;
+    --border-color-checked:#fc9c1c;
+}

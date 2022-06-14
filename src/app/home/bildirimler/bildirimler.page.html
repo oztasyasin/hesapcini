@@ -1,0 +1,22 @@
+<ion-header>
+  
+</ion-header>
+<ion-content>
+  <div class="container">
+    <button (click)="bildirimClick(i)" class="bildirimOutsideFrame" *ngFor="let bildirim of bildirimler;let i = index" style="background-color: transparent;">
+      <div class="bildirimFrame">
+        <div class="iconFrame">
+          <ion-icon class="bildirimIcon" name="enter" *ngIf="bildirim.tip"></ion-icon>
+          <ion-icon class="bildirimIcon" name="exit" *ngIf="!bildirim.tip"></ion-icon>
+        </div>
+        <div class="descriptionFrame">
+          <ion-label> {{bildirim.description}} <br>{{bildirim.price}}₺</ion-label>
+        </div>
+        <div class="iconFrame" style="font-size: small;">
+          {{bildirim.days}} Gün
+        </div>
+      </div>
+    </button>
+
+  </div>
+</ion-content>

@@ -1,0 +1,269 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="musteriFrame">
+      <div class="iconFrame">
+        <ion-icon class="personIcon" name="person"></ion-icon>
+      </div>
+      <div class="inputFrame">
+        <ion-button class="customerSelect">
+          <ion-label>Müşteri/Tedarikçi Seçiniz</ion-label>
+        </ion-button>
+      </div>
+    </div>
+    <div class="inputsFrame">
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Ambar
+          </ion-label>
+          <ion-icon class="inputIcons" name="search"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Kategori Kodu
+          </ion-label>
+          <ion-icon class="inputIcons" name="search"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Proje Kodu
+          </ion-label>
+          <ion-icon class="inputIcons" name="search"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Ödeme Planı
+          </ion-label>
+          <ion-icon class="inputIcons" name="search"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Para Birimi
+          </ion-label>
+          <ion-icon class="inputIcons" name="search"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Fatura No
+          </ion-label>
+          <ion-icon class="inputIcons" name="pencil"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Tarih
+          </ion-label>
+          <ion-icon class="inputIcons" name="calendar"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Sevk No
+          </ion-label>
+          <ion-icon class="inputIcons" name="pencil"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="fullSizeRow">
+        <ion-input class="input">
+          <ion-label class="inputLabel">
+            Sevk Tarihi
+          </ion-label>
+          <ion-icon class="inputIcons" name="calendar"></ion-icon>
+        </ion-input>
+      </div>
+    </div>
+    <div class="buttonFrame">
+      <ion-button class="urunEkleButon" (click)="urunState=!urunState">
+        <ion-icon class="buttonIcon" name="logo-dropbox"></ion-icon>
+        <ion-label  style="margin-left: 5px;">Ürün Ekleyiniz</ion-label>
+      </ion-button>
+    </div>
+    <div class="urunFrame" *ngIf="urunState">
+      <div class="outFrame" *ngFor="let urun of urunler">
+        <div class="urunButton" *ngIf="urun.indirimler.length==0&&urun.promosyon.length==0">
+          <ion-label class="urunTitle">{{urun.title}}</ion-label>
+          <div class="urunImageFrame">
+            <ion-img [src] = "img" class="urunImg"></ion-img>
+          </div>
+          <div class="buttonParts">
+            <ion-label class="urunTitleLabel">Miktar</ion-label>
+            <ion-label class="urunInfoLabel">{{urun.miktar}}</ion-label>
+          </div>
+          <div class="buttonParts">          
+            <ion-label  class="urunTitleLabel">Fiyat</ion-label>
+            <ion-label class="urunInfoLabel">{{urun.fiyat}}₺</ion-label>
+          </div>
+          <div class="buttonParts">          
+            <ion-label class="urunTitleLabel">Tutar</ion-label>
+            <ion-label class="urunInfoLabel">{{urun.tutar}}₺</ion-label>
+          </div>
+          <div class="removeIconFrame" (click)="removeUrun(urun)">
+            <ion-icon name="trash"></ion-icon>
+          </div>
+        </div>
+        <div class="urunButton" style="border-bottom-right-radius: 0px;" *ngIf="urun.indirimler.length!=0||urun.promosyon.length!=0">
+          <ion-label class="urunTitle">{{urun.title}}</ion-label>
+          <div class="urunImageFrame">
+            <ion-img [src] = "img" class="urunImg"></ion-img>
+          </div>
+          <div class="buttonParts">
+            <ion-label class="urunTitleLabel">Miktar</ion-label>
+            <ion-label class="urunInfoLabel">{{urun.miktar}}</ion-label>
+          </div>
+          <div class="buttonParts">          
+            <ion-label  class="urunTitleLabel">Fiyat</ion-label>
+            <ion-label class="urunInfoLabel">{{urun.fiyat}}₺</ion-label>
+          </div>
+          <div class="buttonParts">          
+            <ion-label class="urunTitleLabel">Tutar</ion-label>
+            <ion-label class="urunInfoLabel">{{urun.tutar}}₺</ion-label>
+          </div>
+          <div class="removeIconFrame" (click)="removeUrun(urun)">
+            <ion-icon name="trash"></ion-icon>
+          </div>
+          <!-- <div class="indirimSwitch">
+            <ion-icon name="pricetag" class="priceIcon"></ion-icon>
+          </div> -->
+        </div>
+        <div class="indirimFrame" *ngIf="urun.indirimler.length!=0||urun.promosyon.length!=0">
+          <div class="priceLabelFrame">
+            <ng-container *ngFor="let indirim of urun.indirimler">
+              <div class="indirimLine">
+                <div class="priceIconFrame">
+                  <ion-icon name="pricetag" class="priceIcon"></ion-icon>
+                </div>
+                <div class="labelDiv">
+                  İndirim:<br>{{indirim.miktar}}₺ (%{{indirim.oran}})
+                </div>
+                <ion-icon class="remove" (click)="removeIndirim(urun,indirim)" name="trash"></ion-icon>
+              </div>
+            </ng-container>
+            <ng-container *ngFor="let promosyon of urun.promosyon">
+              <div class="indirimLine">
+                <div class="priceIconFrame">
+                  <ion-icon name="gift" class="priceIcon"></ion-icon>
+                </div>
+                <div class="labelDiv">
+                  Promosyon:<br>{{promosyon.title}}
+                </div>
+                <ion-icon class="remove" (click)="removePromosyon(urun,promosyon)" name="trash"></ion-icon>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="taksitlerFrame">
+      <ion-segment class="segmentFrame" (ionChange)="selectedState=!selectedState" value="tahsilEdilmemiş" mode="md">
+        <ion-segment-button class="segment" value="tahsilEdilmemiş" >
+          <ion-label>Tahsil Edilmemiş</ion-label>
+        </ion-segment-button>
+        <ion-segment-button class="segment" value="tahsilEdilenler">
+          <ion-label>Tahsil Edilenler</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      <div class="buttonFrame" *ngIf="!taksitState" style="border-width: 0px;justify-content: center;align-items: center;">
+        <ion-button class="urunEkleButon" style="width: 50%;margin-left:25%;"  (click)="getTaksitler()">
+          <ion-label style="margin-left: 5px;">Taksit Planı Oluştur</ion-label>
+        </ion-button>
+      </div>
+      <div class="taksitFrame" *ngIf="taksitState">
+        <ng-container *ngFor="let taksit of taksitler;let i=index" >
+          <div class="taksitItemFrame" *ngIf="taksit.state == selectedState">
+            <div class="buttonParts" style="border-width: 0px;text-align: left;align-items: flex-end;gap:1px">
+              <ion-label class="taksitLabel">
+                Taksit Tarihi
+              </ion-label>
+              <ion-label class="taksitLabel">
+                Hesap
+              </ion-label>
+              <ion-label class="taksitLabel">
+                Taksit Tutarı
+              </ion-label>
+              <ion-label class="taksitLabel" *ngIf="taksit.state">
+                Tahsil Tutarı
+              </ion-label>
+              <ion-label class="taksitLabel" *ngIf="taksit.state">
+                Tahsil Tarihi
+              </ion-label>
+            </div>
+            <div class="buttonParts" style="border-width: 0px;text-align: right;align-items: flex-start;gap:1px">
+              <ion-label class="taksitLabel">
+                {{taksit.tarih}}
+              </ion-label>
+              <ion-label class="taksitLabel">
+                {{taksit.hesap}}
+              </ion-label>
+              <ion-label class="taksitLabel">
+                {{taksit.taksitTutari}}
+              </ion-label>
+              <ion-label class="taksitLabel" *ngIf="taksit.state">
+                {{taksit.tahsilEdilen}}
+              </ion-label>
+              <ion-label class="taksitLabel" *ngIf="taksit.state">
+                {{taksit.tahsilatTarihi}}
+              </ion-label>
+            </div>
+            <div class="optionsFrame">
+              <ion-icon name="ellipsis-vertical" (click)="optionsMenuClick(i)"></ion-icon>
+            </div>
+            <div class="optionsMenu" [style.right]="outFrames[i]">
+              <div class="buttonParts" (click)="tahsilEt(taksit)">
+                <ion-icon name="card"></ion-icon>
+                <ion-label class="optionLabels">Tahsil Et</ion-label>
+              </div>
+              <div class="buttonParts">
+                <ion-icon name="pencil"></ion-icon>
+                <ion-label class="optionLabels">Düzenle</ion-label>
+              </div>
+              <div class="buttonParts">
+                <ion-icon name="trash"></ion-icon>
+                <ion-label class="optionLabels">Sil</ion-label>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+          
+        <div class="dummyDiv" style="height: 20px;">
+
+        </div>
+      </div>
+      <div class="toplamFrame">
+        <div class="descriptionFrame">
+          <ion-label class="toplamLabels">&emsp;Bürüt Toplam:</ion-label>
+          <ion-label class="toplamLabels">&emsp;İndirimler Toplamı:</ion-label>
+          <ion-label class="toplamLabels">&emsp;Ara Toplam:</ion-label>
+          <ion-label class="toplamLabels">&emsp;KDV Toplamı:</ion-label>
+          <ion-label class="toplamLabels" style="border-width: 0px;">&emsp;Net Toplam:</ion-label>
+        </div>
+        <div class="totalFrame">
+          <ion-label class="toplamLabels">0₺&emsp;</ion-label>
+          <ion-label class="toplamLabels">0₺&emsp;</ion-label>
+          <ion-label class="toplamLabels">0₺&emsp;</ion-label>
+          <ion-label class="toplamLabels">0₺&emsp;</ion-label>
+          <ion-label class="toplamLabels" style="border-width: 0px;">0₺&emsp;</ion-label>
+        </div>
+      </div>
+    </div>
+    <div class="dummyDiv" style="height: 20px;">
+
+    </div>
+  </div>
+</ion-content>

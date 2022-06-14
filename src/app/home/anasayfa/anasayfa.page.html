@@ -1,0 +1,18 @@
+<ion-content>
+  <div style="height: 10px;display:flex;background-color: transparent;"></div>
+  <div class="container" >
+    <!-- [(ngStyle)]="getWindowStyle" -->
+    <div class="insideContainer" style="width:var(--my-var);">
+      <div class="itemFrame" *ngFor ="let favori of favoriler;let i = index">
+        <div class="item">
+          <button class="button" (click) ="buttonClick(favori)">
+            <ion-img class="img" [src]="img"></ion-img>
+              {{favori.title}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<div style="height: 10px;display:flex;background-color: transparent;"></div>
+

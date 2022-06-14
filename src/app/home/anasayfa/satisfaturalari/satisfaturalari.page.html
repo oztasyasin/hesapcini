@@ -1,0 +1,116 @@
+<ion-header>
+  <div class="searchInputFrame" style="margin-top: 10px;">
+    <ion-icon (click)="back()" name="chevron-back"></ion-icon>
+    <ion-input (input)="textChange($event.target.value)"  class="inputs" placeholder="{{placeHolders[placeHolderIndex]}}" type="text" style="margin-bottom: 5px;">
+      <ion-icon  class="searchicon" size="small" name="search"></ion-icon>
+    </ion-input>
+    <ion-icon (click) = "forward()" name="chevron-forward"></ion-icon>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <div class="outsideFrame" *ngFor="let fis of fisler|filter:searchInput;let i=index">
+      <div class="insideFrame">
+        <div class="leftFrame" style="flex-direction: column;">   
+          <ion-label class="fisNo">&ensp;{{fis.fisNo}}&ensp;</ion-label>
+        </div>
+        <div class="middleFrame">
+          <div class="topFrame">
+            <ion-label class="cariAd">&ensp;{{fis.cari}}</ion-label>
+            <ion-label class="tarih">Tarih: {{fis.tarih}}&ensp;</ion-label>
+          </div>
+          <div class="fisInfoFrame">
+            <div class="insideFrames">
+              <ion-label class="baslik">Fatura Tipi</ion-label>
+              <ion-label class="icerik">{{fis.faturaTipi}}</ion-label>
+            </div>
+            <div class="insideFrames">
+              <ion-label class="baslik"> Ambar</ion-label>
+              <ion-label class="icerik">{{fis.ambar}}</ion-label>
+            </div>
+            <div class="insideFrames" style="border-width: 0px;">
+              <ion-label class="baslik">Tutar</ion-label>
+              <ion-label class="icerik">{{fis.tutar}}₺</ion-label>
+            </div>
+          </div>
+        </div>
+        <div class="rightFrame" (click)="options()">
+          <ion-icon class="options" name="ellipsis-vertical"></ion-icon>
+        </div>
+      </div>
+      <div class="selectionMenu">
+        <ng-container *ngFor="let data of popoverData; let i = index">
+          <div class="selection" *ngIf="i!=popoverData.length-1">
+            <ion-icon class="selectionIcons" name="{{data.icon}}"></ion-icon>
+            <ion-label class="selectionLabels" >{{data.title}}</ion-label>
+          </div>
+          <div class="selection" style="border-width: 0px;" *ngIf="i==popoverData.length-1">
+            <ion-icon class="selectionIcons" name="{{data.icon}}"></ion-icon>
+            <ion-label class="selectionLabels" >{{data.title}}</ion-label>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <div class="fisFrame" *ngFor="let fis of fisler|filter:searchInput;let i=index">
+      <div class="iconFrame" style="flex-direction: column;">   
+        <ion-label class="tarih">&ensp;{{fis.fisNo}}&ensp;</ion-label>
+      </div>
+      <div class="descriptionFrame">
+        <div class="topFrame">
+          <ion-label class="cariAd">{{fis.cari}}</ion-label>
+          <ion-label class="fisNo">Tarih: {{fis.tarih}}</ion-label>
+        </div>       
+        <div class="fisInfoFrame">
+          <div class="insideFrames">
+            <ion-label class="baslik">
+              Fatura Tipi
+            </ion-label>
+            <ion-label class="icerik">
+              {{fis.faturaTipi}}
+            </ion-label>
+          </div>
+          <div class="insideFrames">
+            <ion-label class="baslik">
+              Ambar
+            </ion-label>
+            <ion-label class="icerik">
+              {{fis.ambar}}
+            </ion-label>
+          </div>
+          <div class="insideFrames" style="border-width: 0px;">
+            <ion-label class="baslik">
+              Tutar
+            </ion-label>
+            <ion-label class="icerik">
+              {{fis.tutar}}₺
+            </ion-label>
+          </div>
+        </div>
+      </div>
+      <div class="selectionFrame" [style.right]="outFrames[i]" [style.width] = "widths[i]">
+        <div *ngFor="let data of popoverData" class="selection"   [style.opacity]="opacities[i]">
+          <ion-icon class="selectionIcons" name="{{data.icon}}"  [style.opacity]="opacities[i]"></ion-icon>
+          <ion-label class="selectionLabels" [style.opacity]="opacities[i]">{{data.title}}</ion-label>
+        </div>
+      </div>
+      <div class="settingsFrame">
+        <ion-icon (click)="settingsClick($event,i)" class="settingsIcon" name="ellipsis-vertical"></ion-icon>
+      </div>
+    </div> 
+  </div>-->
+  <div class="bottomFrame" style="position: relative;background-color:transparent">
+
+  </div>
+  <div class="bottomFrame" style="position: relative;background-color:transparent;display: flex;">
+
+  </div>
+</ion-content>
+<div class="bottomFrame">
+  <ion-button (click)="bottomButtonClick()" class="addButton">
+    <ion-icon name="add" class="addIcon"></ion-icon>
+    Yeni Fatura Oluştur
+  </ion-button>
+</div>
+

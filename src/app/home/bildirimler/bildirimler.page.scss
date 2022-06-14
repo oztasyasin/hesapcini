@@ -1,0 +1,48 @@
+.container{
+    margin-top: 10px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bildirimFrame{
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    font-size: 40px;
+    color: #fc9c1c;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: row;
+    background-color: rgba(0,0,0,0.1);
+    justify-content: space-between;
+}
+.bildirimOutsideFrame{
+    margin: auto;
+    margin-top: 5px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+.bildirimIcon{
+}
+.iconFrame{
+    height: 100%;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #6E2798;
+}
+.descriptionFrame{
+    font-size: small;
+    color: blueviolet;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}

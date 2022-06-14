@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar  class="new-background-color">
+    <ion-title style="color: white;" mode="ios">{{headerName}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button class="white" menu="main" (click)="menuButtonClick()"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="infoClick()">
+        <ion-icon class="white" name="reader" *ngIf="!infoState"></ion-icon>
+        <ion-icon class="white" name="reader" *ngIf="infoState" class="turuncuIcon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar >
+      <ion-tab-button (click)="tabClick(0)">
+        <ion-icon class="white" name="home" *ngIf="!states[0]"></ion-icon>
+        <ion-icon class="orange" name="home" *ngIf="states[0]"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="tabClick(1)">
+        <ion-badge color="danger">{{bildirimSayisi}}</ion-badge>
+        <ion-icon class="white" name="notifications" *ngIf="!states[1]"></ion-icon>
+        <ion-icon class="orange" name="notifications" *ngIf="states[1]"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="tabClick(2)">
+        <ion-icon class="white" name="albums" *ngIf="!states[2]"></ion-icon>
+        <ion-icon class="orange" name="albums" *ngIf="states[2]"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="tabClick(3)">
+        <ion-icon class="white" name="person" *ngIf="!states[3]"></ion-icon>
+        <ion-icon class="orange" name="person" *ngIf="states[3]"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,525 @@
+<ion-header>
+  
+</ion-header>
+<ion-content>
+  <div class="cont">
+    <div class="headerFrame">
+      <div class="infoDiv">
+        <div class="userLogoFrame">
+          <ion-icon slot="start" class="personIcon"  name="person"></ion-icon>
+          <ion-label class="userNamelbl">
+            userName
+          </ion-label>
+        </div>
+        <div class="infoFrame">
+          <div class="infoBox">
+            Lisans Süresi<br>
+            <ion-label class="dataLbl">
+              23 Gün
+            </ion-label>
+          </div>
+          <div class="infoBox">
+            Üye Sayısı<br>
+            <ion-label class="dataLbl">
+              {{uyeSayisi}}
+            </ion-label>
+          </div>
+        </div>
+      </div>
+      <div class="updateButtonFrame">
+        <button class="updateButton">
+          Bilgileri Düzenle
+        </button>
+      </div>
+    </div>
+    <div class="slideHeader">
+      <ion-icon (click)="back()" name="chevron-back"  style="margin-left: 10px;"></ion-icon>
+      <ion-label>{{selectedFrame}}</ion-label>
+      <ion-icon (click)="forward()" name="chevron-forward" style="margin-right: 10px;"></ion-icon>
+    </div>
+    <ion-list lines="none" *ngIf="selectedIndex==0">
+      <ion-item *ngFor="let abonelik of abonelikler">
+        <div class="itemDiv">
+          <div class="abonelikFrame" >
+            <ion-thumbnail>
+              <ion-icon name="{{abonelik.icon}}"></ion-icon>
+            </ion-thumbnail>
+            <div class="titleFrameSelected" *ngIf="abonelik.state">
+              <ion-label class="titleLbl">
+                {{abonelik.title}}<br>
+              </ion-label>
+            </div>
+            <div class="titleFrame" *ngIf="!abonelik.state">
+              <ion-label class="titleLbl">
+                {{abonelik.title}}<br>
+              </ion-label>
+            </div>
+            <div class="priceFrame">
+              <ion-label class="fiyatLabel">
+                {{abonelik.fiyat}}₺
+              </ion-label>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div *ngIf="selectedIndex==1">
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" offset-md="3">
+            <ion-list lines = "none" >
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Firma
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Açık Adres
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Telefon
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Mail
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    VKN
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Vergi Dairesi
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <button class="kaydetButton">
+                  <ion-icon  name="save"></ion-icon>
+                  <ion-label class="buttonLabel">
+                    Kaydet
+                  </ion-label>
+                </button>
+              </div>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngIf="selectedIndex==2">
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="6" offset-md="3">
+            <ion-list lines = "none">
+              <div class="fullSizeRow2">
+                <div class="input" style="position: relative;">
+                  <ion-label class="inputLabel">
+                    Mail Tipi
+                  </ion-label>
+                  <ion-select style="width: 90%;"  multiple="false" cancelText="" okText="Tamam">
+                    <ion-select-option value="Smtp">Smtp</ion-select-option>
+                    <ion-select-option value="Gmail">Gmail</ion-select-option>
+                    <ion-select-option value="Google">Google</ion-select-option>
+                    <ion-select-option value="digerSmtp">Diğer Smtp</ion-select-option>
+                  </ion-select> 
+                </div>               
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Smtp Host
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow2">
+                <div class="input" style="position: relative;">
+                  <ion-label class="inputLabel">
+                    Şifreleme
+                  </ion-label>
+                  <ion-select style="width: 90%;"  multiple="false" cancelText="" okText="Tamam">
+                    <ion-select-option value="Smtp">None</ion-select-option>
+                    <ion-select-option value="Gmail">SSL</ion-select-option>
+                    <ion-select-option value="digerSmtp">TIs</ion-select-option>
+                  </ion-select> 
+                </div>               
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Smtp Port
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    E-Mail
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <ion-input class="input">
+                  <ion-label class="inputLabel">
+                    Şifre
+                  </ion-label>
+                </ion-input>
+              </div>
+              <div class="fullSizeRow">
+                <button class="kaydetButton">
+                  <ion-icon  name="save"></ion-icon>
+                  <ion-label class="buttonLabel">
+                    Kaydet
+                  </ion-label>
+                </button>
+              </div>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngIf="selectedIndex==3">
+        <ion-list lines="none" >
+          <ion-item *ngFor="let kullanici of kullanicilar; let m = index" class="kullaniciItem">
+            <div class="itemDiv" style="background-color: transparent;">
+              <div class="abonelikFrame" >
+                <ion-thumbnail>
+                  <ion-icon name="person"></ion-icon>
+                </ion-thumbnail>
+                <button (click)="userSelected(kullanici)" class="titleFrame">
+                  <ion-label class="titleLbl" style="text-align: center;">
+                    {{kullanici.firmaAdi}}
+                  </ion-label>
+                </button>
+                <button (click)="removeUser(i)" class="priceFrame"> 
+                  <ion-icon name="close-circle" size="small" [color]="light">
+
+                  </ion-icon>
+                </button>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list>
+        <ion-popover mode="md" [isOpen]="modalState" (didDismiss) = "modalState=false">
+          <ng-template>
+            <app-popover-content>
+              <div class="modalInside">
+                <div class="modalHeader">
+                  <ion-icon name="person" style="color: white;"></ion-icon>
+                  <ion-icon (click)="modalState=false" name="close" class="closeIcon"></ion-icon>
+                  <ion-icon (click)="removeSelectedUser(selectedUser)" name="person-remove" class="closeIcon" style="left: 5px;top:4px;font-size: 22px;"></ion-icon>
+                </div>
+                <div class="modalContent">
+                  <div class="tableHedarFrame">
+                    <ion-label class="labels">&ensp;Kullanıcı Adı&ensp;</ion-label>
+                    <ion-label class="labels">Firma Adı</ion-label>
+                    <ion-label class="labels">Yetkisi</ion-label>
+                    <ion-label class="labels">Mail</ion-label>
+                    <ion-label class="labels">Mail Onayı</ion-label>
+                    <ion-label class="labels" style="border-width: 0px;">Telefon</ion-label>
+                  </div>
+                  <div class="tableHedarFrame">
+                    <ion-label class="labels">{{selectedUser.name}}</ion-label>
+                    <ion-label class="labels">{{selectedUser.firmaAdi}}</ion-label>
+                    <ion-label class="labels">{{selectedUser.yetki}}</ion-label>
+                    <ion-label class="labels">&ensp;{{selectedUser.mail}}&ensp;</ion-label>
+                    <ion-label *ngIf="selectedUser.mailOnay" class="labels">Onaylandı</ion-label>
+                    <ion-label *ngIf="!selectedUser.mailOnay" class="labels">Onaylanmadı</ion-label>
+                    <ion-label class="labels" style="border-width: 0px;">{{selectedUser.telefon}}</ion-label>
+                  </div>
+                </div>
+              </div>
+            </app-popover-content>
+          </ng-template>
+        </ion-popover>
+        <!-- <ion-popover  mode="md" class="popOver" [isOpen]="modalState" (didDismiss) = "modalState=false">
+          <ng-template mode="md">
+            <app-popover-content class="my-custom-class" mode="md">
+              <div class="modalInside">
+                <div class="modalHeader">
+                  <ion-icon name="person" style="color: white;"></ion-icon>
+                  <ion-icon (click)="modalState=false" name="close" class="closeIcon"></ion-icon>
+                  <ion-icon (click)="removeSelectedUser(selectedUser)" name="person-remove" class="closeIcon" style="left: 5px;top:4px;font-size: 22px;"></ion-icon>
+                </div>
+                <div class="modalContent">
+                  <div class="tableHedarFrame">
+                    <ion-label class="labels">&ensp;Kullanıcı Adı&ensp;</ion-label>
+                    <ion-label class="labels">Firma Adı</ion-label>
+                    <ion-label class="labels">Yetkisi</ion-label>
+                    <ion-label class="labels">Mail</ion-label>
+                    <ion-label class="labels">Mail Onayı</ion-label>
+                    <ion-label class="labels" style="border-width: 0px;">Telefon</ion-label>
+                  </div>
+                  <div class="tableHedarFrame">
+                    <ion-label class="labels">{{selectedUser.name}}</ion-label>
+                    <ion-label class="labels">{{selectedUser.firmaAdi}}</ion-label>
+                    <ion-label class="labels">{{selectedUser.yetki}}</ion-label>
+                    <ion-label class="labels">&ensp;{{selectedUser.mail}}&ensp;</ion-label>
+                    <ion-label *ngIf="selectedUser.mailOnay" class="labels">Onaylandı</ion-label>
+                    <ion-label *ngIf="!selectedUser.mailOnay" class="labels">Onaylanmadı</ion-label>
+                    <ion-label class="labels" style="border-width: 0px;">{{selectedUser.telefon}}</ion-label>
+                  </div>
+                </div>
+              </div>
+            </app-popover-content>
+          </ng-template>
+        </ion-popover> -->
+    </div>
+    </div>
+    <!-- <ion-slides class="slides" pager="false" [options]="slideOpts">
+      <ion-slide>
+        <div class="slideContainer">
+          <div class="slideHeader">
+            <ion-label>Abonelik</ion-label>
+          </div>
+          <ion-list lines="none">
+            <ion-item *ngFor="let abonelik of abonelikler">
+              <div class="itemDiv">
+                <div class="abonelikFrame" >
+                  <ion-thumbnail>
+                    <ion-icon name="{{abonelik.icon}}"></ion-icon>
+                  </ion-thumbnail>
+                  <div class="titleFrameSelected" *ngIf="abonelik.state">
+                    <ion-label class="titleLbl">
+                      {{abonelik.title}}<br>
+                    </ion-label>
+                  </div>
+                  <div class="titleFrame" *ngIf="!abonelik.state">
+                    <ion-label class="titleLbl">
+                      {{abonelik.title}}<br>
+                    </ion-label>
+                  </div>
+                  <div class="priceFrame">
+                    <ion-label class="fiyatLabel">
+                      {{abonelik.fiyat}}₺
+                    </ion-label>
+                  </div>
+                </div>
+              </div>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slideContainer">
+          <div class="slideHeader">
+            <ion-label>Firma</ion-label>
+          </div>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col size-md="6" offset-md="3">
+                  <ion-list lines = "none">
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Firma
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Açık Adres
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Telefon
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Mail
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          VKN
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Vergi Dairesi
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <button class="kaydetButton">
+                        <ion-icon  name="save"></ion-icon>
+                        <ion-label class="buttonLabel">
+                          Kaydet
+                        </ion-label>
+                      </button>
+                    </div>
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slideContainer">
+          <div class="slideHeader">
+            <ion-label>Mail Servis Ayarları</ion-label>
+          </div>
+          <div>
+            <ion-grid>
+              <ion-row>
+                <ion-col size-md="6" offset-md="3">
+                  <ion-list lines = "none">
+                    <div class="fullSizeRow2">
+                      <div class="input" style="position: relative;">
+                        <ion-label class="inputLabel">
+                          Mail Tipi
+                        </ion-label>
+                        <ion-select style="width: 90%;"  multiple="false" cancelText="" okText="Tamam">
+                          <ion-select-option value="Smtp">Smtp</ion-select-option>
+                          <ion-select-option value="Gmail">Gmail</ion-select-option>
+                          <ion-select-option value="Google">Google</ion-select-option>
+                          <ion-select-option value="digerSmtp">Diğer Smtp</ion-select-option>
+                        </ion-select> 
+                      </div>               
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Smtp Host
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow2">
+                      <div class="input" style="position: relative;">
+                        <ion-label class="inputLabel">
+                          Şifreleme
+                        </ion-label>
+                        <ion-select style="width: 90%;"  multiple="false" cancelText="" okText="Tamam">
+                          <ion-select-option value="Smtp">None</ion-select-option>
+                          <ion-select-option value="Gmail">SSL</ion-select-option>
+                          <ion-select-option value="digerSmtp">TIs</ion-select-option>
+                        </ion-select> 
+                      </div>               
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Smtp Port
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          E-Mail
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <ion-input class="input">
+                        <ion-label class="inputLabel">
+                          Şifre
+                        </ion-label>
+                      </ion-input>
+                    </div>
+                    <div class="fullSizeRow">
+                      <button class="kaydetButton">
+                        <ion-icon  name="save"></ion-icon>
+                        <ion-label class="buttonLabel">
+                          Kaydet
+                        </ion-label>
+                      </button>
+                    </div>
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide >
+        <div class="slideContainer">
+          <div class="slideHeader">
+            <ion-label>Kullanıcılar ve Yetkileri</ion-label>
+          </div>
+          <ion-list lines="none">
+            <ion-item *ngFor="let kullanici of kullanicilar; let i = index">
+              <div class="itemDiv" style="background-color: transparent;">
+                <div class="abonelikFrame" >
+                  <ion-thumbnail>
+                    <ion-icon name="person"></ion-icon>
+                  </ion-thumbnail>
+                  <button (click)="userSelected(kullanici)" class="titleFrame">
+                    <ion-label class="titleLbl" style="text-align: center;">
+                      {{kullanici.firmaAdi}}
+                    </ion-label>
+                  </button>
+                  <button (click)="removeUser(i)" class="priceFrame"> 
+                    <ion-icon name="close-circle" size="small" color="light">
+
+                    </ion-icon>
+                  </button>
+                </div>
+              </div>
+            </ion-item>
+          </ion-list>
+        </div>
+        <ion-popover  mode="md" class="popOver" [isOpen]="modalState"  [canDismiss]="canDismiss" (didDismiss) = "modalState=false">
+          <ng-template mode="md">
+            <app-popover-content class="my-custom-class" mode="md">
+              <div class="modalInside">
+                <div class="modalHeader">
+                  <ion-icon name="person" style="color: white;"></ion-icon>
+                  <ion-icon (click)="modalState=false" name="close" class="closeIcon"></ion-icon>
+                  <ion-icon (click)="removeSelectedUser(selectedUser)" name="person-remove" class="closeIcon" style="left: 5px;top:4px;font-size: 22px;"></ion-icon>
+                </div>
+                <div class="modalContent">
+                  <div class="tableHedarFrame">
+                    <ion-label class="labels">&ensp;Kullanıcı Adı&ensp;</ion-label>
+                    <ion-label class="labels">Firma Adı</ion-label>
+                    <ion-label class="labels">Yetkisi</ion-label>
+                    <ion-label class="labels">Mail</ion-label>
+                    <ion-label class="labels">Mail Onayı</ion-label>
+                    <ion-label class="labels" style="border-width: 0px;">Telefon</ion-label>
+                  </div>
+                  <div class="tableHedarFrame">
+                    <ion-label class="labels">{{selectedUser.name}}</ion-label>
+                    <ion-label class="labels">{{selectedUser.firmaAdi}}</ion-label>
+                    <ion-label class="labels">{{selectedUser.yetki}}</ion-label>
+                    <ion-label class="labels">&ensp;{{selectedUser.mail}}&ensp;</ion-label>
+                    <ion-label *ngIf="selectedUser.mailOnay" class="labels">Onaylandı</ion-label>
+                    <ion-label *ngIf="!selectedUser.mailOnay" class="labels">Onaylanmadı</ion-label>
+                    <ion-label class="labels" style="border-width: 0px;">{{selectedUser.telefon}}</ion-label>
+                  </div>
+                </div>
+              </div>
+            </app-popover-content>
+          </ng-template>
+        </ion-popover>
+      </ion-slide>
+    </ion-slides> -->  
+</ion-content>
