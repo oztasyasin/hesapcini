@@ -1,4 +1,4 @@
-.bottomFrame{
+.hc-listbottomFrame{
     width: 100%;
     position:absolute;
     bottom: 0%;
@@ -7,25 +7,25 @@
     justify-content: space-around;
     align-items: center;
 }
-.addIcon{
+.hc-listaddIcon{
     font-size: xx-large;
     font-weight: bolder;
 }
-.addButton{
+.hc-listaddButton{
     width: 65%;
     height: 40px;
     font-size: small;
     font-weight: bold;
     --background: #6E2798;
 }
-.searchInputFrame{
+.hc-listsearchInputFrame{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: transparent;
 }
-.container{
+.hc-listcontainer{
     margin-top: 5px;
     width: 100%;
     display: flex;
@@ -33,142 +33,126 @@
     gap:5px;
     transition: 0.5s;
 }
-.outsideFrame{
-    pointer-events: none;
-    &:hover {
-        background: gray; // hover applied to .parent but disabled by the previous pointer-events: none;
-    }
-    a{
-        pointer-events: auto; // this enable the pointer again
-    }
-    position: relative;
-    background-color: rgba(0,0,0,0.1);
+.hc-listoutsideFrame{
+    border-radius: 10px;
     border-style: solid;
-    border-color: #fc9c1c;
     border-width: 1px;
-    border-radius: 5px;
+    border-color: orange;
     overflow: hidden;
-    height: fit-content;
-    width: 98%;
-    margin-left: 1%;
-    display: flex;
-    flex-direction: column;
-    transition: 0.5s;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-// .outsideFrame:hover .leftFrame{
-//     background-color: transparent;
-// }
-// .outsideFrame:hover .fisNo{
-//     color: #6E2798;
-// }
-.leftFrame{
-    position: relative;
-    height: 100%;
-    width: 7%;
-    display: flex;
-    justify-content: center;
-    border-style: solid;
-    border-width: 0px;
-    align-items: center;
-    background-color: #6E2798;
-    border-right-width: 1px;
-    font-size: xx-large;
-    color: #fc9c1c;
-}
-.fisNo{
+    font-size: medium;
     font-weight: bold;
-    font-size: small;
-    writing-mode: vertical-rl;
-    color:#fc9c1c;
-}
-.rightFrame{
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-large;
-    border-color: #fc9c1c;
-    color:  #6E2798;
-}
-
-.middleFrame{
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.fisInfoFrame{
-    width: 100%;
-    height: 60%;
+    position: relative;
+    margin: auto;
+    width: 98%;
+    height: fit-content;
     display: flex;
     flex-direction: row;
+    background-color: rgba(0,0,0,0.1);
+}
+.hc-listleftFrame{
+    width: 6%;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
-}
-.topFrame{
-    width: 100%;
-    height: 20%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.insideFrames{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     border-style: solid;
     border-width: 0px;
     border-right-width: 1px;
-    border-color: #6E2798;
-    word-wrap: break-word;
-    flex-direction: column;
-    gap:2px;
-    transition: 0.5s;
+    border-color: orange;
+    background-color: #6E2798;
+    color: orange;
+}
+.hc-listfisNo{
+    font-size: medium;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+}
+.hc-listrightFrame{
+    position: absolute;
     height: 100%;
-    color: black;
+    width: 6%;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    top: 0%;
+    right: 0%;
+    text-align: center;
+    display: flex;
+    border-style: solid;
+    border-width: 0px;
+    border-left-width: 1px;
+    border-color: orange;
+    background-color: #6E2798;
+    color: orange;
 }
-.baslik{
-    font-size: small;
-}
-.icerik{
+
+.hc-listmiddleFrame{
+    width: 88%;
+    display: flex;
     
+    color: black;
+    flex-direction: column;
+}
+.hc-listfisInfoFrame{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    transition: 0.5s;
+}
+.hc-listtopFrame{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.hc-listinsideFrames{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+    flex:1;
+    height: 90%;
+    border-style: solid;
+    border-width: 0px;
+    border-right-width: 1px;
+}
+.hc-listbaslik{
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: small;
+    font-weight: 200;
+}
+.hc-listicerik{
+    height: 50%;
     font-size: small;
     font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
-.cariAd{
+.hc-listcariAd{
     transition: 0.5s;
     font-weight: bolder;
     color: #6E2798;
     font-size: medium;
 }
-.tarih{
+.hc-listtarih{
     font-weight: bold;
     font-size: small;
 
 }
-.insideFrame{
+.hc-listinsideFrame{
     width: 100%;
     display: flex;
     flex-direction: row;
     transition: 0.5s;
 }
-// .selectionMenu{
-//     justify-content: flex-end;
-//     align-items: flex-end;
-//     opacity: 0;
-//     height: 0px;
-//     width: 100%;
-//     background-color: #6E2798;
-//     display: flex;
-//     flex-direction: row;
-//     transition: 0.5;
-// }
-.selection{
+.hc-listselection{
     height: 100%;
     border-style: solid;
     border-width: 0px;
@@ -183,17 +167,17 @@
     transition: 0.5s;
     color: white;
 }
-.selectionMenu:has(.selection:hover){
+.hc-listselectionMenu:has(.selection:hover){
     background-color: #fc9c1c;
 }
-.selectionIcons{
+.hc-listselectionIcons{
     height: 50%;
     display: flex;
     color: white;
     font-size: x-large;
     transition: 0.5s;
 }
-.selectionLabels{
+.hc-listselectionLabels{
     display: flex;
     color: white;
     font-size: small;
@@ -203,21 +187,20 @@
     align-items: center;
     transition: 0.5s;
 }
-.selectionMenu{
+.hc-listselectionMenu{
     position: absolute;
-    bottom: 0%;
-    right: 5%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    opacity: 0;
-    width: 0%;
-    height: 40%;
-    background-color: #6E2798;
     display: flex;
-    flex-direction: row;
-    transition: 0.5;
+    width: 0%;
+    right: 6%;
+    height: 40%;
+    color:white;
+    background-color: #6E2798;
+    bottom: 0%;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
 }
-.rightFrameTop{
+.hc-listrightFrameTop{
     width: 5%;
     height: 100%;
     display: flex;
@@ -232,25 +215,44 @@
     position: absolute;
     opacity: 0;
 }
-.outsideFrame:hover  .rightFrame {
-    background-color: #6E2798;
-    color: #fc9c1c;
-}
-.outsideFrame:hover > .selectionMenu {
+.hc-listrightFrame:hover ~ .hc-listselectionMenu{
     width: 88%;
-    transition: 0.5s;
+    visibility: visible;
     opacity: 1;
 }
-.outsideFrame:hover .fisInfoFrame{
-    align-self: center;
-    height: 35%;
-    
+.hc-listrightFrame:hover ~ .hc-listmiddleFrame > .hc-listfisInfoFrame{
+    height: 40%;
 }
-.outsideFrame:hover .insideFrame{
+.hc-listrightFrame:hover ~ .hc-listmiddleFrame{
     background-color: white;
 }
-.rightFrameTop:hover ~ .selectionMenu{
-    width: 88%;
+.hc-listcariAd{
     transition: 0.5s;
-    opacity: 1;
+    font-weight: bolder;
+    color: #6E2798;
+    font-size: medium;
+}
+.hc-listtarih{
+    font-weight: bold;
+    font-size: small;
+    margin-right: 5px;
+}
+.hc-bottomInfoFrame{
+    position: absolute;
+    width: 88%;
+    display: flex;
+    height: 30%;
+    bottom:0%;
+    right: 6%;
+    flex-direction: row;
+    font-size: x-small;
+    font-weight: bolder;
+}
+.hc-gonderButton{
+    background-color:#6E2798;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 }

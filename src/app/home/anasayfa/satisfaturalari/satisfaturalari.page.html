@@ -1,68 +1,85 @@
 <ion-header>
-  <div class="searchInputFrame" style="margin-top: 10px;">
+  <div class="hc-listsearchInputFrame" style="margin-top: 10px;">
     <ion-icon (click)="back()" name="chevron-back"></ion-icon>
-    <ion-input (input)="textChange($event.target.value)" class="inputs" placeholder="{{placeHolders[placeHolderIndex]}}"
+    <ion-input (input)="textChange($event.target.value)" class="hc-listinputs" placeholder="{{placeHolders[placeHolderIndex]}}"
       type="text" style="margin-bottom: 5px;">
-      <ion-icon class="searchicon" size="small" name="search"></ion-icon>
+      <ion-icon class="hc-listsearchicon" size="small" name="search"></ion-icon>
     </ion-input>
     <ion-icon (click)="forward()" name="chevron-forward"></ion-icon>
   </div>
 </ion-header>
 <ion-content>
-  <div class="container">
-    <div class="outsideFrame" *ngFor="let fis of fisler|filter:searchInput;let i=index">
-      <div class="insideFrame">
-        <div class="leftFrame" style="flex-direction: column;">
-          <ion-label class="fisNo">&ensp;{{fis.fisNo}}&ensp;</ion-label>
-        </div>
-        <div class="middleFrame">
-          <div class="topFrame">
-            <ion-label class="cariAd">&ensp;{{fis.cari}}</ion-label>
-            <ion-label class="tarih">Tarih: {{fis.tarih}}&ensp;</ion-label>
-          </div>
-          <div class="fisInfoFrame">
-            <div class="insideFrames">
-              <ion-label class="baslik">Fatura Tipi</ion-label>
-              <ion-label class="icerik">{{fis.faturaTipi}}</ion-label>
-            </div>
-            <div class="insideFrames">
-              <ion-label class="baslik"> Ambar</ion-label>
-              <ion-label class="icerik">{{fis.ambar}}</ion-label>
-            </div>
-            <div class="insideFrames" style="border-width: 0px;">
-              <ion-label class="baslik">Tutar</ion-label>
-              <ion-label class="icerik">{{fis.tutar}}₺</ion-label>
-            </div>
-          </div>
-        </div>
-        <a class="rightFrame">
-          <ion-icon class="options" name="ellipsis-vertical"></ion-icon>
-        </a>
+  <div class="hc-listcontainer">
+    <div class="hc-listoutsideFrame" *ngFor="let fis of fisler|filter:searchInput;let i=index">
+      <div class="hc-listleftFrame" style="flex-direction: column;">
+        <ion-label class="hc-listfisNo">&ensp;{{fis.fisNo}}&ensp;</ion-label>
       </div>
-      <div class="selectionMenu">
-        <ng-container *ngFor="let data of popoverData; let i = index">
-          <div class="selection" *ngIf="i!=popoverData.length-1">
-            <ion-icon class="selectionIcons" name="{{data.icon}}"></ion-icon>
-            <ion-label class="selectionLabels">{{data.title}}</ion-label>
+      <a class="hc-listrightFrame">
+        <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
+      </a>
+      <div class="hc-listmiddleFrame" (click)="middleClick()">
+        <div class="hc-listtopFrame">
+          <ion-label class="hc-listcariAd">&ensp;{{fis.cari}}</ion-label>
+          <ion-label class="hc-listtarih">Tarih: {{fis.tarih}}&ensp;</ion-label>
+        </div>
+        <div class="hc-listfisInfoFrame">
+          <div class="hc-listinsideFrames">
+            <ion-label class="hc-listbaslik">Fatura Tipi</ion-label>
+            <ion-label class="hc-listicerik">{{fis.faturaTipi}}</ion-label>
           </div>
-          <div class="selection" style="border-width: 0px;" *ngIf="i==popoverData.length-1">
-            <ion-icon class="selectionIcons" name="{{data.icon}}"></ion-icon>
-            <ion-label class="selectionLabels">{{data.title}}</ion-label>
+          <div class="hc-listinsideFrames">
+            <ion-label class="hc-listbaslik"> Ambar</ion-label>
+            <ion-label class="hc-listicerik">{{fis.ambar}}</ion-label>
+          </div>
+          <div class="hc-listinsideFrames" style="border-width: 0px;">
+            <ion-label class="hc-listbaslik">Tutar</ion-label>
+            <ion-label class="hc-listicerik">{{fis.tutar}}₺ <br>{{123}}$</ion-label>
+          </div>
+        </div>
+      </div>
+      <div class="hc-bottomInfoFrame">
+        <div class="hc-listinsideFrames" style="border-width: 0px;">
+          <ion-label style="color: red;" class="hc-listiptal">İptal</ion-label>
+        </div>
+        <div class="hc-listinsideFrames" style="border-width: 0px;">
+          <ion-label style="color:blue;" class="hc-listArsiv">TaslakEArşiv - Satış</ion-label>
+        </div>
+        <div class="hc-listinsideFrames"  style="border-width: 0px;">
+         <ion-label style="color: green;" (click)="gonderState=!gonderState" class="gonder" *ngIf="gonderState">
+            Gönderildi
+         </ion-label>
+         <button class="hc-gonderButton" (click)="gonderState=!gonderState" *ngIf="!gonderState">
+            <ion-icon name="send"></ion-icon>
+            <ion-label>Gönder</ion-label>
+         </button>
+        </div>
+      </div>
+      <div class="hc-listselectionMenu">
+        <ng-container *ngFor="let data of popoverData; let i = index">
+          <div class="hc-listselection" *ngIf="i!=popoverData.length-1"  (click)="settingsClcik()">
+            <ion-icon class="hc-listselectionIcons" name="{{data.icon}}"></ion-icon>
+            <ion-label class="hc-listselectionLabels">{{data.title}}</ion-label>
+          </div>
+          <div class="hc-listselection" style="border-width: 0px;" *ngIf="i==popoverData.length-1"  (click)="settingsClcik()">
+            <ion-icon class="hc-listselectionIcons" name="{{data.icon}}"></ion-icon>
+            <ion-label class="hc-listselectionLabels">{{data.title}}</ion-label>
           </div>
         </ng-container>
       </div>
     </div>
-  </div>
-  <div class="bottomFrame" style="position: relative;background-color:transparent">
+
 
   </div>
-  <div class="bottomFrame" style="position: relative;background-color:transparent;display: flex;">
+  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent">
+
+  </div>
+  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent;display: flex;">
 
   </div>
 </ion-content>
-<div class="bottomFrame">
-  <ion-button (click)="bottomButtonClick()" class="addButton">
-    <ion-icon name="add" class="addIcon"></ion-icon>
+<div class="hc-listbottomFrame">
+  <ion-button (click)="bottomButtonClick()" class="hc-listaddButton">
+    <ion-icon name="add" class="hc-listaddIcon"></ion-icon>
     Yeni Fatura Oluştur
   </ion-button>
 </div>

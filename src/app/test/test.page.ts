@@ -55,4 +55,11 @@ export class TestPage implements OnInit {
   options(){
     this.state=!this.state;
   }
+  mainFrameClick(){
+    console.log("main frame");
+    
+  }
+  iconClick(){
+    console.log("icon");
+  }
 }

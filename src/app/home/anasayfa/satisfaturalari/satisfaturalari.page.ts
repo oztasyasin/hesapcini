@@ -24,6 +24,7 @@ export class SatisfaturalariPage implements OnInit {
   outFrames=[];
   width = "0%";
   placeHolders=["Fiş No","Müşteri Adı","Tutar","Tarih","Ambar","Fatura Tipi"]
+  gonderState = false;
   popoverData=[
     {
       title:"Düzenle",
@@ -87,7 +88,6 @@ export class SatisfaturalariPage implements OnInit {
     }
     console.log(this.widths[i]);
     
-    console.log("dasd");
     
     // const popover = await this.popoverController.create({
     //   component: PopoverPage,
@@ -119,5 +119,13 @@ export class SatisfaturalariPage implements OnInit {
   }
   bottomButtonClick(){
     this.router.navigateByUrl('/home/tabs/satisfisi');
+  }
+  settingsClcik(){
+    console.log("settings");
+    
+  }
+  middleClick(){
+    console.log("middle");
+    
   }
 }

@@ -1,4 +1,53 @@
-<div class="parent">
-  parent
-  <a>child</a>
-</div>
+<ion-content>
+  <div class="container">
+    <div class="outSideFrame" >
+      <div class="leftFrame">
+        <ion-label class="no">&ensp;0000000000000000&ensp;</ion-label>
+      </div>
+      <div class="rigthFrame">
+        <ion-icon  name="ellipsis-vertical"></ion-icon>
+      </div>
+      <div class="middleFrame" (click)="mainFrameClick()">
+        <div class="topFrame">
+          <ion-label class="cariAd">&ensp;Yasin Öztaş</ion-label>
+            <ion-label class="tarih">Tarih: 01.01.2022&ensp;</ion-label>
+        </div>
+        <div class="bottomFrame">
+            <div class="listinsideFrames">
+              <ion-label class="hc-listbaslik">Fatura Tipi</ion-label>
+              <ion-label class="hc-listicerik">faturaTipi</ion-label>
+            </div>
+            <div class="listinsideFrames">
+              <ion-label class="hc-listbaslik"> Ambar</ion-label>
+              <ion-label class="hc-listicerik">ambar</ion-label>
+            </div>
+            <div class="listinsideFrames" style="border-width: 0px;">
+              <ion-label class="hc-listbaslik">Tutar</ion-label>
+              <ion-label class="hc-listicerik">500₺</ion-label>
+            </div>
+          </div>
+      </div>
+      
+      <div class="settingsFrame">
+        <div class="listinsideFrames">
+          <ion-icon name="trash" (click)="iconClick()"></ion-icon>
+        </div>
+        <div class="listinsideFrames">
+          <ion-icon name="trash" (click)="iconClick()"></ion-icon>
+        </div>
+        <div class="listinsideFrames">
+          <ion-icon name="trash" (click)="iconClick()"></ion-icon>
+        </div>
+        <div class="listinsideFrames">
+          <ion-icon name="trash" (click)="iconClick()"></ion-icon>
+        </div>
+        <div class="listinsideFrames">
+          <ion-icon name="trash" (click)="iconClick()"></ion-icon>
+        </div>
+        <div class="listinsideFrames" style="border-width: 0px;">
+          <ion-icon name="trash"  (click)="iconClick()"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
