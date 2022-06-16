@@ -1,7 +1,7 @@
 <ion-header>
   <div style="width: 100%;height: 10px;"></div>
   <div class="searchFrame">
-    <ion-input (input)="textChange($event.target.value)"  class="inputs" placeholder="Bul" type="text">
+    <ion-input (input)="textChange($event.target.value)" class="inputs" placeholder="Bul" type="text">
       <ion-icon class="searchicon" size="small" name="search"></ion-icon>
     </ion-input>
   </div>
@@ -9,33 +9,32 @@
 </ion-header>
 
 <ion-content>
-  <!-- <div style="width: 100%;height: 10px;"></div> -->
-  <div *ngIf="searchInput==''" style="width: 100%;flex-direction: column;justify-content: center;align-items: center;display: flex;background-color: white;">
-    <div  *ngFor="let p of pages;let i = index" style="width: 80%;background-color: white;">
-      <ion-item lines="none" button *ngIf="p.children?.length>0" (click)="menuClick(i)" detail = "false">
+  <div *ngIf="searchInput==''" class="kisayollarFrame">
+    <div *ngFor="let p of pages;let i = index" class="kisayolFrame">
+      <ion-item lines="none" button *ngIf="p.children?.length>0" (click)="menuClick(i)" detail="false">
         <ion-thumbnail slot="start">
-          <ion-img  class="thmb" [src] = "img"></ion-img>
+          <ion-img class="thmb" [src]="img"></ion-img>
         </ion-thumbnail>
         <ion-label class="morYazi" color="red">{{p.title}}</ion-label>
       </ion-item>
-      <ion-list *ngIf="p.state" >
-          <ion-item *ngFor="let c of p.children; let j= index" lines="none" button (click)="submenuClick(c,i)" detail = "false">
-            <ion-icon class="icon" name="add" slot="start" *ngIf="!c.isFavourite"></ion-icon>
-            <ion-icon class="icon" name="remove" slot="start" *ngIf="c.isFavourite"></ion-icon>
-            <ion-label class="turuncuYazi">{{c.title}}</ion-label>
-          </ion-item>
-      </ion-list>
-    </div>
-  </div>
-  <div *ngIf="searchInput!=''" style="width: 100%;flex-direction: column;justify-content: center;align-items: center;display: flex;background-color: white;">
-    <div  *ngFor="let p of pages ;let i = index " style="width: 80%;background-color: white;">
-        <ion-item *ngFor="let c of p.children| filter:searchInput; let j= index" style="--background:white;"  lines="none" button (click)="submenuClick(c,i)" detail = "false">
-          <ion-icon class="icon" name="add"  slot="start" *ngIf="!c.isFavourite"></ion-icon>
+      <ion-list *ngIf="p.state">
+        <ion-item *ngFor="let c of p.children; let j= index" lines="none" button (click)="submenuClick(c,i)"
+          detail="false">
+          <ion-icon class="icon" name="add" slot="start" *ngIf="!c.isFavourite"></ion-icon>
           <ion-icon class="icon" name="remove" slot="start" *ngIf="c.isFavourite"></ion-icon>
           <ion-label class="turuncuYazi">{{c.title}}</ion-label>
         </ion-item>
-
+      </ion-list>
+    </div>
+  </div>
+  <div *ngIf="searchInput!=''" class="kisayollarFrame">
+    <div *ngFor="let p of pages ;let i = index " style="width: 80%;background-color: white;">
+      <ion-item *ngFor="let c of p.children| filter:searchInput; let j= index" style="--background:white;" lines="none"
+        button (click)="submenuClick(c,i)" detail="false">
+        <ion-icon class="icon" name="add" slot="start" *ngIf="!c.isFavourite"></ion-icon>
+        <ion-icon class="icon" name="remove" slot="start" *ngIf="c.isFavourite"></ion-icon>
+        <ion-label class="turuncuYazi">{{c.title}}</ion-label>
+      </ion-item>
     </div>
   </div>
 </ion-content>
-

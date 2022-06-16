@@ -4,7 +4,7 @@
 .underLogo{
     width: 80%;
     margin-right: 10%;
-    height: 90px;
+    height: fit-content;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 .logoFrame{
     width: 100%;
-    height: 150px;
+    height: fit-content;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -156,6 +156,8 @@ ion-thumbnail{
     border-color: rgba(255,255,255,0.1);
 }
 .personIcon{
+    height: 30px;
+    width: 30px;
     color: white;
 }
 .logoLeft{
@@ -188,19 +190,27 @@ ion-menu-toggle{
 .logoF{
     border-radius: 10px;
     border-style: solid;
-    height: 50%;
+    height: 60px;
     font-size: xx-large;
     aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     border-color: white;
+    flex-direction: column;
     border-width: 1px;
+    width:60px;
+    margin: auto;
+    word-wrap: break-word;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .labelF{
-    height: 50%;
-    font-size: xx-large;
-    display: flex;
+    font-size: large;
+    width:60%;
+    margin: auto;
+    word-wrap: break-word;
     justify-content: center;
     align-items: center;
     text-align: center;

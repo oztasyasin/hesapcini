@@ -60,3 +60,15 @@ ion-thumbnail{
 ion-content{
     --background:white;
 }
+.kisayollarFrame{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: white;
+}
+.kisayolFrame{
+    width: 80%;
+    background-color: white;
+}

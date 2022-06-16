@@ -20,8 +20,9 @@ export class AnasayfaPage implements OnInit {
   getWindowStyle = {
     width: "",
   };
+  maxSize =0;
   currentPlatform:CurrentPlatform;
-  
+  count = [];
   constructor(
       private platform:Platform, 
       private service:MenuicerikService, 
@@ -34,6 +35,12 @@ export class AnasayfaPage implements OnInit {
       })
     }
   ngOnInit() {
+    if(window.innerHeight>window.innerHeight){
+      this.maxSize = window.innerHeight;
+    }
+    else{
+      this.maxSize = window.innerWidth;
+    }
     this.screenOrientation.unlock();
     this.favoriler = this.service.getFavoriler();
     this.setCurrentPlatform();
@@ -51,6 +58,10 @@ export class AnasayfaPage implements OnInit {
   getSizes(){
     let width = this.width- (this.width%120);
     let screen = this.width;
+    let result = Number.parseInt((Number.parseInt(this.maxSize.toString())/120).toString());
+    for(let i=0; i<result+1; i++){
+      this.count.push(result);
+    }
     this.getWindowStyle = getPageResize(width,screen);
     document.body.style.setProperty('--my-var', this.getWindowStyle.width);
     

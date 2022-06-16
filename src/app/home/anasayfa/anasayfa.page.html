@@ -1,8 +1,7 @@
 <ion-content>
   <div style="height: 10px;display:flex;background-color: transparent;"></div>
   <div class="container" >
-    <!-- [(ngStyle)]="getWindowStyle" -->
-    <div class="insideContainer" style="width:var(--my-var);">
+    <div class="insideContainer">
       <div class="itemFrame" *ngFor ="let favori of favoriler;let i = index">
         <div class="item">
           <button class="button" (click) ="buttonClick(favori)">
@@ -11,8 +10,8 @@
           </button>
         </div>
       </div>
+      <div class="itemFrame" *ngFor="let c of count" style="height: 10px;"></div>
     </div>
   </div>
 </ion-content>
 <div style="height: 10px;display:flex;background-color: transparent;"></div>
-

@@ -1,5 +1,5 @@
 <ion-header>
-  
+
 </ion-header>
 
 <ion-content>
@@ -9,9 +9,9 @@
         <ion-icon class="personIcon" name="person"></ion-icon>
       </div>
       <div class="inputFrame">
-        <ion-button class="customerSelect">
+        <button class="customerSelect">
           <ion-label>Müşteri/Tedarikçi Seçiniz</ion-label>
-        </ion-button>
+        </button>
       </div>
     </div>
     <div class="inputsFrame">
@@ -91,7 +91,7 @@
     <div class="buttonFrame">
       <ion-button class="urunEkleButon" (click)="urunState=!urunState">
         <ion-icon class="buttonIcon" name="logo-dropbox"></ion-icon>
-        <ion-label  style="margin-left: 5px;">Ürün Ekleyiniz</ion-label>
+        <ion-label style="margin-left: 5px;">Ürün Ekleyiniz</ion-label>
       </ion-button>
     </div>
     <div class="urunFrame" *ngIf="urunState">
@@ -99,17 +99,17 @@
         <div class="urunButton" *ngIf="urun.indirimler.length==0&&urun.promosyon.length==0">
           <ion-label class="urunTitle">{{urun.title}}</ion-label>
           <div class="urunImageFrame">
-            <ion-img [src] = "img" class="urunImg"></ion-img>
+            <ion-img [src]="img" class="urunImg"></ion-img>
           </div>
           <div class="buttonParts">
             <ion-label class="urunTitleLabel">Miktar</ion-label>
             <ion-label class="urunInfoLabel">{{urun.miktar}}</ion-label>
           </div>
-          <div class="buttonParts">          
-            <ion-label  class="urunTitleLabel">Fiyat</ion-label>
+          <div class="buttonParts">
+            <ion-label class="urunTitleLabel">Fiyat</ion-label>
             <ion-label class="urunInfoLabel">{{urun.fiyat}}₺</ion-label>
           </div>
-          <div class="buttonParts">          
+          <div class="buttonParts">
             <ion-label class="urunTitleLabel">Tutar</ion-label>
             <ion-label class="urunInfoLabel">{{urun.tutar}}₺</ion-label>
           </div>
@@ -117,29 +117,27 @@
             <ion-icon name="trash"></ion-icon>
           </div>
         </div>
-        <div class="urunButton" style="border-bottom-right-radius: 0px;" *ngIf="urun.indirimler.length!=0||urun.promosyon.length!=0">
+        <div class="urunButton" style="border-bottom-right-radius: 0px;"
+          *ngIf="urun.indirimler.length!=0||urun.promosyon.length!=0">
           <ion-label class="urunTitle">{{urun.title}}</ion-label>
           <div class="urunImageFrame">
-            <ion-img [src] = "img" class="urunImg"></ion-img>
+            <ion-img [src]="img" class="urunImg"></ion-img>
           </div>
           <div class="buttonParts">
             <ion-label class="urunTitleLabel">Miktar</ion-label>
             <ion-label class="urunInfoLabel">{{urun.miktar}}</ion-label>
           </div>
-          <div class="buttonParts">          
-            <ion-label  class="urunTitleLabel">Fiyat</ion-label>
+          <div class="buttonParts">
+            <ion-label class="urunTitleLabel">Fiyat</ion-label>
             <ion-label class="urunInfoLabel">{{urun.fiyat}}₺</ion-label>
           </div>
-          <div class="buttonParts">          
+          <div class="buttonParts">
             <ion-label class="urunTitleLabel">Tutar</ion-label>
             <ion-label class="urunInfoLabel">{{urun.tutar}}₺</ion-label>
           </div>
           <div class="removeIconFrame" (click)="removeUrun(urun)">
             <ion-icon name="trash"></ion-icon>
           </div>
-          <!-- <div class="indirimSwitch">
-            <ion-icon name="pricetag" class="priceIcon"></ion-icon>
-          </div> -->
         </div>
         <div class="indirimFrame" *ngIf="urun.indirimler.length!=0||urun.promosyon.length!=0">
           <div class="priceLabelFrame">
@@ -168,26 +166,26 @@
           </div>
         </div>
       </div>
-      
     </div>
     <div class="taksitlerFrame">
       <ion-segment class="segmentFrame" (ionChange)="selectedState=!selectedState" value="tahsilEdilmemiş" mode="md">
-        <ion-segment-button class="segment" value="tahsilEdilmemiş" >
+        <ion-segment-button class="segment" value="tahsilEdilmemiş">
           <ion-label>Tahsil Edilmemiş</ion-label>
         </ion-segment-button>
         <ion-segment-button class="segment" value="tahsilEdilenler">
           <ion-label>Tahsil Edilenler</ion-label>
         </ion-segment-button>
       </ion-segment>
-      <div class="buttonFrame" *ngIf="!taksitState" style="border-width: 0px;justify-content: center;align-items: center;">
-        <ion-button class="urunEkleButon" style="width: 50%;margin-left:25%;"  (click)="getTaksitler()">
+      <div class="buttonFrame" *ngIf="!taksitState"
+        style="border-width: 0px;justify-content: center;align-items: center;">
+        <ion-button class="urunEkleButon" style="width: 50%;margin-left:25%;" (click)="getTaksitler()">
           <ion-label style="margin-left: 5px;">Taksit Planı Oluştur</ion-label>
         </ion-button>
       </div>
       <div class="taksitFrame" *ngIf="taksitState">
-        <ng-container *ngFor="let taksit of taksitler;let i=index" >
+        <ng-container *ngFor="let taksit of taksitler;let i=index">
           <div class="taksitItemFrame" *ngIf="taksit.state == selectedState">
-            <div class="buttonParts" style="border-width: 0px;text-align: left;align-items: flex-end;gap:1px">
+            <div class="buttonParts1">
               <ion-label class="taksitLabel">
                 Taksit Tarihi
               </ion-label>
@@ -204,7 +202,7 @@
                 Tahsil Tarihi
               </ion-label>
             </div>
-            <div class="buttonParts" style="border-width: 0px;text-align: right;align-items: flex-start;gap:1px">
+            <div class="buttonParts1">
               <ion-label class="taksitLabel">
                 {{taksit.tarih}}
               </ion-label>
@@ -224,23 +222,29 @@
             <div class="optionsFrame">
               <ion-icon name="ellipsis-vertical" (click)="optionsMenuClick(i)"></ion-icon>
             </div>
-            <div class="optionsMenu" [style.right]="outFrames[i]">
+            <div class="optionsMenu">
               <div class="buttonParts" (click)="tahsilEt(taksit)">
-                <ion-icon name="card"></ion-icon>
+                <div class="iconFrame1">
+                  <ion-icon class="partsIcon" name="card"></ion-icon>
+                </div>
                 <ion-label class="optionLabels">Tahsil Et</ion-label>
               </div>
               <div class="buttonParts">
-                <ion-icon name="pencil"></ion-icon>
+                <div class="iconFrame1">
+                  <ion-icon class="partsIcon" name="pencil"></ion-icon>
+                </div>
                 <ion-label class="optionLabels">Düzenle</ion-label>
               </div>
               <div class="buttonParts">
-                <ion-icon name="trash"></ion-icon>
+                <div class="iconFrame1">
+                  <ion-icon class="partsIcon" name="trash"></ion-icon>
+                </div>
                 <ion-label class="optionLabels">Sil</ion-label>
               </div>
             </div>
           </div>
         </ng-container>
-          
+
         <div class="dummyDiv" style="height: 20px;">
 
         </div>

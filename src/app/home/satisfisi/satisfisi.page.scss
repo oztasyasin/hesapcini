@@ -16,7 +16,7 @@
 }
 .iconFrame{
     height: 100%;
-    aspect-ratio: 1;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,16 +27,18 @@
     flex: 1;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
 }
 .customerSelect{
-    --background: #6E2798;
-    width: 90%;
+    background-color: #6E2798;
+    width: clamp(100px,90%,150px);
+    aspect-ratio: 4;
     font-size: small;
     font-weight: bold;
     color: white;
     text-transform: none;
+    border-radius: 5px;
 }
 .inputsFrame{
     width: 90%;
@@ -228,10 +230,10 @@
 
 }
 .buttonParts{
-    margin: auto;
     position: relative;
     flex: 1;
-    height: 60%;
+    margin: auto;
+    height: 50%;
     display: flex;
     border-style: solid;
     justify-content: center;
@@ -242,6 +244,23 @@
     border-width: 0px;
     border-right-width: 1px;
     border-color: #6E2798;
+}
+.buttonParts1{
+    position: relative;
+    flex: 1;
+    margin:auto;
+    height: 50%;
+    display: flex;
+    border-style: solid;
+    justify-content: center;
+    flex-direction: column;
+    border-right-width: 1px;
+    border-color: #6E2798;
+    border-width: 0px;
+    text-align: left;
+    align-items: flex-end;
+    gap:1px;
+    transition:0.5s;
 }
 .urunImageFrame{
     margin-top: 20px;
@@ -325,7 +344,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+}
+.taksitItemFrame:hover  .optionsMenu{
+    background-color: #6E2798;
+    width: 90%;
+    right: 10%;
+}
+.taksitItemFrame:hover .buttonParts1{
+    margin: 0;
 }
 .taksitLabel{
     margin: 0;
@@ -353,23 +379,26 @@
     font-size: x-large;
     font-weight: bold;
 }
+
+.optionsFrame:hover ~ .buttonParts1{
+    background-color: #6E2798;
+}
 .optionsMenu{
-    height: 100%;
-    width: 90%;
+    height: 50%;
+    right: -100%;
+    width: 0%;
     bottom: 0px;
     position: absolute;
     background-color: #6E2798;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: x-large;
     color: white;
     transition: 0.5s;
     display: flex;
 }
 .optionLabels{
     font-size: small;
-
 }
 .urunAdi{
     width: 100%;
@@ -379,7 +408,7 @@
     background-color: #fc9c1c;
 }
 .indirimFrame{
-    width: 50%;
+    width: 80%;
     height: fit-content;
     position: relative;
     flex-direction: row;
@@ -489,6 +518,25 @@
     color: red;
     font-size:medium;
     margin: auto;
+}
+.indirimLine .remove:hover{
+    background-color: #6E2798;
+}
+.iconFrame{
+    height: 100%;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 70px;
+}
+.iconFrame1{
+    height: 100%;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: large;
 }
 //style="background-color:red;margin: auto;"
 

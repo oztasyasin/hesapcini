@@ -6,25 +6,36 @@
     justify-content: center;
     background-color: transparent;
 }
+// .insideContainer{
+//     margin: auto,10;
+//     align-items: center;
+//     height: 100px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     background-color: transparent;
+// }
 .insideContainer{
-    margin: auto,10;
+    width: 95%;
     align-items: center;
+    background-color: #6E2798;
     height: 100px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
     background-color: transparent;
 }
 .itemFrame{
     display: flex;
     border-radius: 5px;
-    width: 120px;
+    width: 110px;
     height: 180px;
     justify-content: center;
     align-items: center;
     word-wrap: break-word;
 }
 .item{
-    width: 116px;
+    width: 106px;
     height: 176px;
     border-radius: 5px;
     transform-style: preserve-3d;
