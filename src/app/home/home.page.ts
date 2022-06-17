@@ -56,7 +56,8 @@ export class HomePage implements OnInit{
   infoClick(){
     this.states = [false,false,false,false];
     this.infoState = true;
-    this.headerName = "Kart Açıklamaları";
-    this.router.navigateByUrl('/home/tabs/info');
+     this.router.navigateByUrl('/home/tabs/filterscreen');
+    // this.headerName = "Kart Açıklamaları";
+    // this.router.navigateByUrl('/home/tabs/info');
   }
 }

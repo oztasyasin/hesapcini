@@ -69,7 +69,9 @@ export class AnasayfaPage implements OnInit {
   buttonClick(button:any){
     if(button.title=="Satış Faturaları"){
       this.router.navigateByUrl('/home/tabs/satisfaturalari');
-      
+    }
+    if(button.title=="Müşteri ve Tedarikçiler"){
+      this.router.navigateByUrl('/home/tabs/carilistesi');
     }
   }
   screen(){

@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="hc-container">
+    <div class="hc-insideContainer">
+      <ion-grid class="hc-filterGrid">
+        <ion-row>
+          <ion-col size="6">
+            <ion-input [(ngModel)]='baslangic' class="hc-dateInputs" type="date">
+              <ion-label class="inputPlaceHolders" style="top: -5px;">Başlangıç Tarihi</ion-label>
+              <div style="width: 100%; text-align: center;">
+                <ion-label class="dateText">{{baslangic}}</ion-label>
+                <ion-icon style="position: absolute;right:5px" name="calendar"></ion-icon>
+              </div>
+            </ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-input [(ngModel)]='baslangic' class="hc-dateInputs" type="date">
+              <ion-label class="inputPlaceHolders" style="top: -5px;">Bitiş Tarihi</ion-label>
+              <div style="width: 100%; text-align: center;">
+                <ion-label class="dateText">{{baslangic}}</ion-label>
+                <ion-icon style="position: absolute;right:5px" name="calendar"></ion-icon>
+              </div>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="inputPlaceHolders">İptal</ion-label>
+            <ion-select interface="popover" class="hc-inputs" style="align-items:flex-end; justify-content:flex-end">
+              <ion-select-option value="bacon">Tümü</ion-select-option>
+              <ion-select-option value="bacon">İptal Edilmiş</ion-select-option>
+              <ion-select-option value="bacon">İptal Edilmemiş</ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col>
+            <ion-label class="inputPlaceHolders">Ambar</ion-label>
+            <ion-select interface="popover" class="hc-inputs">
+            </ion-select>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input class="hc-inputs">
+              <ion-icon style="position: absolute;right:10px" name="search"></ion-icon>
+              <ion-label class="inputPlaceHolders" style="top:-5px;">Kategori</ion-label>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input class="hc-inputs">
+              <ion-icon style="position: absolute;right:10px" name="search"></ion-icon>
+              <ion-label class="inputPlaceHolders" style="top:-5px;">Fiş No</ion-label>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button class="hc-filterButton">
+              <ion-icon name="funnel" slot="start"></ion-icon>
+              <ion-label>Filtrele</ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

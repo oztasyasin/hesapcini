@@ -38,6 +38,14 @@ const routes: Routes = [
       {
         path: 'satisfisi',
         loadChildren: () => import('./satisfisi/satisfisi.module').then( m => m.SatisfisiPageModule)
+      },
+      {
+        path: 'carilistesi',
+        loadChildren: () => import('./carilistesi/carilistesi.module').then( m => m.CarilistesiPageModule)
+      },
+      {
+        path: 'filterscreen',
+        loadChildren: () => import('./filterscreen/filterscreen.module').then( m => m.FilterscreenPageModule)
       }
     ]
   },
