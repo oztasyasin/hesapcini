@@ -49,7 +49,116 @@ export class SatisfaturalariPage implements OnInit {
     {
       title: "Mail Gönder",
       icon: "mail"
-    }
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title:"Sil",
+      icon:"trash",
+    },
+    {
+      title: "İptal Et",
+      icon: "close",
+    },
+    {
+      title: "Pdf Yazdır",
+      icon: "document-text",
+    },
+    {
+      title: "Pdf Gönder",
+      icon: "send",
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title:"Sil",
+      icon:"trash",
+    },
+    {
+      title: "İptal Et",
+      icon: "close",
+    },
+    {
+      title: "Pdf Yazdır",
+      icon: "document-text",
+    },
+    {
+      title: "Pdf Gönder",
+      icon: "send",
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title:"Sil",
+      icon:"trash",
+    },
+    {
+      title: "İptal Et",
+      icon: "close",
+    },
+    {
+      title: "Pdf Yazdır",
+      icon: "document-text",
+    },
+    {
+      title: "Pdf Gönder",
+      icon: "send",
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title:"Sil",
+      icon:"trash",
+    },
+    {
+      title: "İptal Et",
+      icon: "close",
+    },
+    {
+      title: "Pdf Yazdır",
+      icon: "document-text",
+    },
+    {
+      title: "Pdf Gönder",
+      icon: "send",
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title: "Mail Gönder",
+      icon: "mail"
+    },
+    {
+      title:"Sil",
+      icon:"trash",
+    },
+    {
+      title: "İptal Et",
+      icon: "close",
+    },
+
   ]
   ngOnInit() {
     this.fisler = this.fisService.getFisler();

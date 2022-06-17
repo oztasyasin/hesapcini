@@ -36,36 +36,48 @@
             <ion-label class="hc-listicerik">{{fis.tutar}}₺ <br>{{123}}$</ion-label>
           </div>
         </div>
-      </div>
-      <div class="hc-bottomInfoFrame">
-        <div class="hc-listinsideFrames" style="border-width: 0px;">
-          <ion-label style="color: red;" class="hc-listiptal">İptal</ion-label>
-        </div>
-        <div class="hc-listinsideFrames" style="border-width: 0px;">
-          <ion-label style="color:blue;" class="hc-listArsiv">TaslakEArşiv - Satış</ion-label>
-        </div>
-        <div class="hc-listinsideFrames"  style="border-width: 0px;">
-         <ion-label style="color: green;" (click)="gonderState=!gonderState" class="gonder" *ngIf="gonderState">
-            Gönderildi
-         </ion-label>
-         <button class="hc-gonderButton" (click)="gonderState=!gonderState" *ngIf="!gonderState">
-            <ion-icon name="send"></ion-icon>
-            <ion-label>Gönder</ion-label>
-         </button>
-        </div>
-      </div>
-      <div class="hc-listselectionMenu">
-        <ng-container *ngFor="let data of popoverData; let i = index">
-          <div class="hc-listselection" *ngIf="i!=popoverData.length-1"  (click)="settingsClcik()">
-            <ion-icon class="hc-listselectionIcons" name="{{data.icon}}"></ion-icon>
-            <ion-label class="hc-listselectionLabels">{{data.title}}</ion-label>
+        <div class="hc-bottomInfoFrame">
+          <div class="hc-listinsideFrames" style="border-width: 0px;">
+            <ion-label style="color: red;" class="hc-listiptal">İptal</ion-label>
           </div>
-          <div class="hc-listselection" style="border-width: 0px;" *ngIf="i==popoverData.length-1"  (click)="settingsClcik()">
-            <ion-icon class="hc-listselectionIcons" name="{{data.icon}}"></ion-icon>
-            <ion-label class="hc-listselectionLabels">{{data.title}}</ion-label>
+          <div class="hc-listinsideFrames" style="border-width: 0px;">
+            <ion-label style="color:blue;" class="hc-listArsiv">TaslakEArşiv - Satış</ion-label>
           </div>
-        </ng-container>
+          <div class="hc-listinsideFrames"  style="border-width: 0px;">
+           <ion-label style="color: green;" (click)="gonderState=!gonderState" class="gonder" *ngIf="gonderState">
+              Gönderildi
+           </ion-label>
+           <button class="hc-gonderButton" (click)="gonderState=!gonderState" *ngIf="!gonderState">
+              <ion-icon name="send"></ion-icon>
+              <ion-label>Gönder</ion-label>
+           </button>
+          </div>
+        </div>
+        <div class="hc-listselectionMenu">
+          <ion-grid class="hc-grid">
+            <ion-row style="background-color:#6E2798">
+              <ion-col style="background-color:#6E2798"  size="2" *ngFor="let data of popoverData; let i = index">
+                <div class="hc-selectionMenuParts"   (click)="settingsClcik()">
+                  <ion-icon  name="{{data.icon}}"></ion-icon>
+                  <ion-label >{{data.title}}</ion-label>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <!-- <ng-container *ngFor="let data of popoverData; let i = index">
+            <div  class="hc-selectionMenuParts" *ngIf="i!=popoverData.length-1"  (click)="settingsClcik()">
+              <ion-icon  name="{{data.icon}}"></ion-icon>
+              <ion-label >{{data.title}}</ion-label>
+            </div>
+            <div  class="hc-selectionMenuParts" *ngIf="i==popoverData.length-1"  (click)="settingsClcik()">
+              <ion-icon  name="{{data.icon}}"></ion-icon>
+              <ion-label >{{data.title}}</ion-label>
+            </div>
+          </ng-container> -->
+        </div>
       </div>
+      
+ 
     </div>
 
 
