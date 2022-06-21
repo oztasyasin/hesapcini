@@ -7,7 +7,7 @@
       <div class="hc-listrightFrame">
 
       </div>
-      <div class="hc-listmiddleFrame" style="justify-content: space-between;">
+      <div class="hc-listmiddleFrame" style="display: flex;justify-content:space-between;">
         <div class="hc-listtopFrame" style="margin-top: 5px;">
           <ion-label class="hc-listcariAd" style="margin-left: 10px;">Ürün Adı</ion-label>
         </div>
@@ -26,16 +26,10 @@
           </div>
         </div>
         <div class="hc-listselectionMenu">
-          <ion-grid class="hc-grid">
-            <ion-row style="background-color:#6E2798">
-              <ion-col style="background-color:#6E2798;" size="2" *ngFor="let data of popoverData; let i = index">
-                <div class="hc-selectionMenuParts"   (click)="settingsClcik()">
-                  <ion-icon  name="{{data.icon}}"></ion-icon>
-                  <ion-label >{{data.title}}</ion-label>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
+          <div class="hc-listinsideFrames2" *ngFor="let item of popoverData">
+            <ion-icon name="{{item.icon}}"></ion-icon>
+            <ion-label>{{item.title}}</ion-label>
+          </div>
         </div>
       </div>
     </div>
