@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carilistesi',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarilistesiPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
-
+  cariClick(){
+    this.router.navigateByUrl('/home/tabs/caribilgileri')
+  }
 }

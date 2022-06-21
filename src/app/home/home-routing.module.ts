@@ -50,6 +50,10 @@ const routes: Routes = [
       {
         path: 'ceksenet',
         loadChildren: () => import('./ceksenet/ceksenet.module').then( m => m.CeksenetPageModule)
+      },
+      {
+        path: 'caribilgileri',
+        loadChildren: () => import('./caribilgileri/caribilgileri.module').then( m => m.CaribilgileriPageModule)
       }
     ]
   },

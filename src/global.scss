@@ -649,6 +649,8 @@ ion-checkbox {
   color: black;
   transition: 0.5s;
   flex-direction: column;
+  font-size: small;
+  font-weight: 400;
 }
 
 .hc-listfisInfoFrame {
@@ -1021,12 +1023,29 @@ ion-checkbox {
 
 .hc-cekTopFrame {
   width: 100%;
-  background-color: #6E2798;
+  background-color: #ffffff;
   position: relative;
   display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 0ch;
+  border-bottom-width: 2px;
+  border-radius: 20px;
+  border-color: #fc9c1c;
+  overflow: hidden;
+}
+
+.hc-headerContainer {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   border-style: solid;
   border-width: 0px;
-  border-top-width: 2px;
+  border-bottom-width: 2px;
   border-color: #fc9c1c;
 }
 
@@ -1034,7 +1053,11 @@ ion-checkbox {
   width: 150px;
   height: 150px;
   border-width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .hc-cekImg {
@@ -1045,18 +1068,75 @@ ion-checkbox {
 .hc-cekMiddleFrame {
   justify-content: center;
   align-items: center;
+  display: flex;
   gap: 5px
 }
 
 .hc-cekToplines {
   margin: 0px;
-  color: white;
-  border-color: rgba(255, 255, 255, 0.2);
+  color: black;
+  border-color: rgba(0, 0, 0, 0.2);
+  gap: 10px;
+  width: 90%;
 }
 
 .hc-cekTopBaslik {
   position: absolute;
   bottom: 5px;
   left: 5px;
+  color: black;
+}
+
+.hc-cards {
+  --background: #6E2798;
+}
+
+.hc-caribottomLine {
+  height: 20px;
+  background-color: #ffffff;
+  width: 100%;
+  margin: auto;
+  justify-content: flex-end;
+  display: flex;
+  color:#6E2798;
+  text-align: center;
+  align-items: center;
+}
+
+.hc-cariAddButton {
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e2798;
+
+}
+
+.hc-addIcon {
+  font-size: xx-large;
+  font-weight: bolder;
   color: white;
+}
+
+.hc-buttonContainer {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.hc-addButton {
+  width: clamp(200px, 80%, 250px);
+  ;
+  height: 100%;
+  --background: #6E2798;
+  text-transform: none;
+}
+
+.hc-centeredTop {
+  gap: 10px;
+  margin-top: 5px;
 }
