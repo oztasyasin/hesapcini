@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TextfilterPipe } from './textfilter.pipe';
 // import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
-
+import { HttpClientModule  } from '@angular/common/http';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
 @NgModule({
   declarations: [AppComponent, TextfilterPipe],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },ScreenOrientation],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },ScreenOrientation,HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

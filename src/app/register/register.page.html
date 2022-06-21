@@ -1,7 +1,7 @@
 <div class="cont">
   <div class="content">
     <div class="insideFrame">
-      <div class="logoFrame">
+      <div class="logoFrame" style="background-color: white;">
         <ion-img class="logo" [src]="logoSrc">
   
         </ion-img>
@@ -13,7 +13,7 @@
         <input class="inputss" placeholder="Şifre" type="password">
       </div>
       <div class="buttonFrame">
-        <button class="loginButton">
+        <button class="loginButton" (click)="register()">
           Kayıt Ol
         </button>
       </div>

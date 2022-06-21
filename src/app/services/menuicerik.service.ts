@@ -246,7 +246,7 @@ export class MenuicerikService {
         {
           title: 'Çek ve Senet İşlemleri',
           state: false,
-          isFavourite: false,
+          isFavourite: true,
           description: "Kart Açıklaması",
           activeText: ""
         },

@@ -1,0 +1,59 @@
+<ion-header>
+  <div class="hc-cekTopFrame">
+    <div class="hc-listleftFrame hc-listCariLeftFrame hc-cekTopLeftFrame">
+      <ion-img class="hc-cekImg" src="assets/images/icon-ceksenet.svg"></ion-img>
+    </div>
+    <div class="hc-listmiddleFrame hc-cekMiddleFrame">
+      <div class="hc-lines hc-cekToplines">
+        <ion-label class="hc-cekText">Portfoy No:</ion-label>
+        <ion-label class="hc-cekText" style="font-weight:bolder">00000000000000000</ion-label>
+      </div>
+      <div class="hc-lines hc-cekToplines">
+        <ion-label class="hc-cekText">Vade Tarihi:</ion-label>
+        <ion-label class="hc-cekText" style="font-weight:bolder">00.00.0000</ion-label>
+      </div>
+      <div class="hc-lines hc-cekToplines" >
+        <ion-label class="hc-cekText">Tutar:</ion-label>
+        <ion-label class="hc-cekText" style="font-weight:bolder">0000000000$</ion-label>
+      </div>
+    </div>
+    <ion-label class="hc-listbaslik hc-cekTopBaslik">Seri No:000000000000000000000000000000</ion-label>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="hc-container">
+    <ion-grid class="hc-filterGrid">
+      <ion-row *ngFor="let item of cekSenetTransList;">
+        <ion-col>
+          <div class="hc-listoutsideFrame">
+            <div class="hc-listleftFrame"
+              style="border-style:dashed;background-color:transparent;border-color: #6E2798;">
+            </div>
+            <div class="hc-listmiddleFrame" style="margin: auto;width: 98%;">
+              <div class="hc-listtopFrame">
+                <ion-label class="hc-listcariAd">{{item.status}}</ion-label>
+                <ion-label class="hc-listtarih">{{item.dateTime}}</ion-label>
+              </div>
+              <div class="hc-listfisInfoFrame" style="flex-direction: column;gap:10px;margin-top: 10px;">
+                <div class="hc-lines">
+                  <ion-label class="hc-cekText">Tr Kodu:</ion-label>
+                  <ion-label class="hc-cekText" style="font-weight:bolder">{{item.trCode}}</ion-label>
+                </div>
+                <div class="hc-lines">
+                  <ion-label class="hc-cekText">Cari:</ion-label>
+                  <ion-label class="hc-cekText" style="font-weight:bolder">{{item.clientId}}</ion-label>
+                </div>
+                <div class="hc-lines">
+                  <ion-label class="hc-cekText">Banka Hesabı:</ion-label>
+                  <ion-label class="hc-cekText" style="font-weight:bolder">{{item.bankAccountId}}</ion-label>
+                </div>
+                <div style="height: 10px;"></div>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

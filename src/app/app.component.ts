@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {Platform} from '@ionic/angular';
 import { MenuicerikService } from './services/menuicerik.service';
 @Component({
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
   favoriler = [];
   img = "assets/images/icon-banka.svg"
   searchInput = ""
-  constructor(private platform:Platform, private islemService:MenuicerikService) { }
+  constructor(private platform:Platform, private islemService:MenuicerikService, private router:Router) { }
   bottomBarHeight = "";
   submenuState = true;
   ngOnInit(): void {
@@ -61,5 +62,10 @@ export class AppComponent implements OnInit {
   checkboxClick(){
     this.submenuState = !this.submenuState;
     this.islemService.setAllParentsState(this.submenuState);
+  }
+  goPage(item){
+    console.log(item);
+    
+    this.router.navigate['login'];
   }
 }

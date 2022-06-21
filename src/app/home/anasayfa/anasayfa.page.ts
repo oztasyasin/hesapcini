@@ -73,6 +73,9 @@ export class AnasayfaPage implements OnInit {
     if(button.title=="Müşteri ve Tedarikçiler"){
       this.router.navigateByUrl('/home/tabs/carilistesi');
     }
+    if(button.title=="Çek ve Senet İşlemleri"){
+      this.router.navigateByUrl('/home/tabs/ceksenet');
+    }
   }
   screen(){
    

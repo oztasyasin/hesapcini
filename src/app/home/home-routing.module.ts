@@ -46,6 +46,10 @@ const routes: Routes = [
       {
         path: 'filterscreen',
         loadChildren: () => import('./filterscreen/filterscreen.module').then( m => m.FilterscreenPageModule)
+      },
+      {
+        path: 'ceksenet',
+        loadChildren: () => import('./ceksenet/ceksenet.module').then( m => m.CeksenetPageModule)
       }
     ]
   },
