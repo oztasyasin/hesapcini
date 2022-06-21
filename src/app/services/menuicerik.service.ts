@@ -403,6 +403,26 @@ export class MenuicerikService {
         }
       ]
     },
+    {
+      title: 'Tanımlamalar',
+      state: true,
+      children: [
+        {
+          title: 'Satış Fiyatı',
+          state: false,
+          isFavourite: true,
+          description: "Kart Açıklaması",
+          activeText: ""
+        },
+        {
+          title: 'Alış Fiyatı',
+          state: false,
+          isFavourite: false,
+          description: "Kart Açıklaması",
+          activeText: ""
+        },
+      ]
+    },
   ];
   favoriIslemler=[];
   constructor() {

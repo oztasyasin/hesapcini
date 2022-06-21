@@ -54,6 +54,10 @@ const routes: Routes = [
       {
         path: 'caribilgileri',
         loadChildren: () => import('./caribilgileri/caribilgileri.module').then( m => m.CaribilgileriPageModule)
+      },
+      {
+        path: 'satisfiyatlari',
+        loadChildren: () => import('./satisfiyatlari/satisfiyatlari.module').then( m => m.SatisfiyatlariPageModule)
       }
     ]
   },

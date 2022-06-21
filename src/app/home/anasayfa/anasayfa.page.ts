@@ -76,6 +76,9 @@ export class AnasayfaPage implements OnInit {
     if(button.title=="Çek ve Senet İşlemleri"){
       this.router.navigateByUrl('/home/tabs/ceksenet');
     }
+    if(button.title=="Satış Fiyatı"){
+      this.router.navigateByUrl('/home/tabs/satisfiyatlari')
+    }
   }
   screen(){
    

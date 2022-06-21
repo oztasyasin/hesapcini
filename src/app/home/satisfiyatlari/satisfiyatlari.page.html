@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="hc-listcontainer">
+    <div class="hc-listoutsideFrame">
+      <div class="hc-listleftFrame">
+        <ion-label class="hc-listfisNo">&ensp;0000000000000000&ensp;</ion-label>
+      </div>
+      <div class="hc-listrightFrame">
+
+      </div>
+      <div class="hc-listmiddleFrame" style="justify-content: space-between;">
+        <div class="hc-listtopFrame" style="margin-top: 5px;">
+          <ion-label class="hc-listcariAd" style="margin-left: 10px;">Ürün Adı</ion-label>
+        </div>
+        <div class="hc-listfisInfoFrame" style="height: 75%;">
+          <div class="hc-listinsideFrames">
+            <ion-label class="hc-listbaslik" style="text-align: center;">Geçerlilik Tarihi<br>Baslangıç</ion-label>
+            <ion-label class="hc-listicerik">00.00.0000</ion-label>
+          </div>
+          <div class="hc-listinsideFrames">
+            <ion-label class="hc-listbaslik" style="text-align: center;">Geçerlilik Tarihi<br>Bitiş</ion-label>
+            <ion-label class="hc-listicerik">00.00.0000</ion-label>
+          </div>
+          <div class="hc-listinsideFrames" style="border-width: 0px;">
+            <ion-label class="hc-listbaslik" style="text-align: center;">Fiyatı<br>&ensp; .</ion-label>
+            <ion-label class="hc-listicerik">0000$</ion-label>
+          </div>
+        </div>
+        <div class="hc-listselectionMenu">
+          <ion-grid class="hc-grid">
+            <ion-row style="background-color:#6E2798">
+              <ion-col style="background-color:#6E2798;" size="2" *ngFor="let data of popoverData; let i = index">
+                <div class="hc-selectionMenuParts"   (click)="settingsClcik()">
+                  <ion-icon  name="{{data.icon}}"></ion-icon>
+                  <ion-label >{{data.title}}</ion-label>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
