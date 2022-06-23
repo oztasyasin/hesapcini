@@ -1174,4 +1174,12 @@ ion-checkbox {
 .hc-sehirlerFrame{
   min-height: 40px;
   width: clamp(300px,85%,400px);
+
+}
+.hc-sehirlerFrame:active{
+  background-color: #fc9c1c;
+}
+.hc-sehirLabel{
+  font-size: small;
+  font-weight: bold;
 }
