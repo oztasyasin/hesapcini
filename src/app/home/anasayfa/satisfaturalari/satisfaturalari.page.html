@@ -14,7 +14,7 @@
       <div class="hc-listleftFrame" style="flex-direction: column;">
         <ion-label class="hc-listfisNo">&ensp;{{fis.fisNo}}&ensp;</ion-label>
       </div>
-      <a class="hc-listrightFrame">
+      <a class="hc-listrightFrame" (click) = "openSettingsMenu($event,fis)">
         <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
       </a>
       <div class="hc-listmiddleFrame" (click)="middleClick()">
@@ -53,28 +53,12 @@
            </button>
           </div>
         </div>
-        <div class="hc-listselectionMenu">
-          <ion-grid class="hc-grid">
-            <ion-row style="background-color:#6E2798">
-              <ion-col style="background-color:#6E2798"  size="2" *ngFor="let data of popoverData; let i = index">
-                <div class="hc-selectionMenuParts"   (click)="settingsClcik()">
-                  <ion-icon  name="{{data.icon}}"></ion-icon>
-                  <ion-label >{{data.title}}</ion-label>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          <!-- <ng-container *ngFor="let data of popoverData; let i = index">
-            <div  class="hc-selectionMenuParts" *ngIf="i!=popoverData.length-1"  (click)="settingsClcik()">
-              <ion-icon  name="{{data.icon}}"></ion-icon>
-              <ion-label >{{data.title}}</ion-label>
-            </div>
-            <div  class="hc-selectionMenuParts" *ngIf="i==popoverData.length-1"  (click)="settingsClcik()">
-              <ion-icon  name="{{data.icon}}"></ion-icon>
-              <ion-label >{{data.title}}</ion-label>
-            </div>
-          </ng-container> -->
-        </div>
+        <!-- <div class="hc-listselectionMenu">
+          <div class="hc-listinsideFrames2" *ngFor="let item of popoverData">
+            <ion-icon name="{{item.icon}}"></ion-icon>
+            <ion-label style="text-align: center;">{{item.title}}</ion-label>
+          </div>
+        </div> -->
       </div>
       
  

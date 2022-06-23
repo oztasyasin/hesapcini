@@ -198,17 +198,20 @@ export class SatisfaturalariPage implements OnInit {
     console.log(this.widths[i]);
     
     
-    // const popover = await this.popoverController.create({
-    //   component: PopoverPage,
-    //   cssClass: 'my-custom-class',
-    //   componentProps: {data: this.popoverData},
-    //   event: event,
-    //   translucent: true
-    // });
-    // await popover.present();
+
+  }
+  async openSettingsMenu(event,fis){
+    const popover = await this.popoverController.create({
+      component: PopoverPage,
+      cssClass: 'hc-popover',
+      componentProps: {data: this.popoverData},
+      event: event,
+      translucent: true
+    });
+    await popover.present();
   
-    // const { role } = await popover.onDidDismiss();
-    // console.log('onDidDismiss resolved with role', role);
+    const { role } = await popover.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
   }
   back(){
     if(this.placeHolderIndex!=0){

@@ -1,29 +1,8 @@
-<ion-header>
-
-</ion-header>
-<ion-content>
-  <div class="container">
+<ion-content style="--background:#6E2798">
+  <div class="container" style="background-color: transparent;">
     <ion-button class="selectionButton" *ngFor="let d of data;">
-      <ion-icon class="selectionLabel" name="{{d.icon}}"></ion-icon>
+      <ion-icon class="selectionLabel" style="color:#fc9c1c" name="{{d.icon}}"></ion-icon>
       <ion-label class="selectionTitle">{{d.title}}</ion-label>
     </ion-button>
-    <!-- <ion-button>
-      <ion-icon name="{{data[0].icon}}"></ion-icon>
-      {{data[0].title}}</ion-button>
-    <ion-button>
-      <ion-icon name="{{data[1].icon}}"></ion-icon>
-      {{data[1].title}}</ion-button>
-    <ion-button>
-      <ion-icon name="{{data[2].icon}}"></ion-icon>
-      {{data[2].title}}</ion-button>
-    <ion-button>
-      <ion-icon name="{{data[3].icon}}"></ion-icon>
-      {{data[3].title}}</ion-button>
-    <ion-button>
-      <ion-icon name="{{data[4].icon}}"></ion-icon>
-      {{data[4].title}}</ion-button>
-    <ion-button>
-      <ion-icon name="{{data[5].icon}}"></ion-icon>
-      {{data[5].title}}</ion-button> -->
   </div>
 </ion-content>

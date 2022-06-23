@@ -656,11 +656,12 @@ ion-checkbox {
 }
 
 .hc-listfisInfoFrame {
-  margin-top: 10%;
   position: static;
-  height: fit-content;
+  height: 50%;
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.5s;
 }
 
@@ -687,6 +688,7 @@ ion-checkbox {
 }
 
 .hc-listtopFrame {
+  margin-top: 10px;
   width: 95%;
   height: 25%;
   max-height: 30px;
@@ -888,13 +890,16 @@ ion-checkbox {
 //   // width: 120px !important;
 // }
 
-.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listfisInfoFrame {
-  height: max;
+.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listfisInfoFrame>.hc-listinsideFrames>.hc-listicerik {
+  color: #fc9c1c; 
 }
 
-.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-bottomInfoFrame {
-  margin-top: 2px;
+.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listtopFrame>.hc-listcariAd{
+ color: #fc9c1c; 
 }
+.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listtopFrame>.hc-listtarih{
+  color: #fc9c1c; 
+ }
 
 .hc-listrightFrame:hover~.hc-listmiddleFrame {
   background-color: white;
@@ -910,18 +915,18 @@ ion-checkbox {
   font-weight: bold;
   font-size: small;
   margin-right: 5px;
+  transition: 0.5s;
 }
 
 .hc-bottomInfoFrame {
-  margin-top: 10px;
   position: relative;
   width: 100%;
   display: flex;
-  height: fit-content;
   flex-direction: row;
   font-size: x-small;
   transition: 0.5s;
   font-weight: bolder;
+  height: 25%;
 }
 
 .hc-gonderButton {
@@ -1182,4 +1187,12 @@ ion-checkbox {
 .hc-sehirLabel{
   font-size: small;
   font-weight: bold;
+}
+.hc-listoptions{
+  pointer-events: none;
+}
+.hc-popover{
+  --max-width:50%;
+  --backdrop-opacity:0;
+  --background:transparent;
 }
