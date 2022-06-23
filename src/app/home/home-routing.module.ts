@@ -58,6 +58,10 @@ const routes: Routes = [
       {
         path: 'satisfiyatlari',
         loadChildren: () => import('./satisfiyatlari/satisfiyatlari.module').then( m => m.SatisfiyatlariPageModule)
+      },
+      {
+        path: 'sehirler',
+        loadChildren: () => import('./sehirler/sehirler.module').then(m=>m.SehirlerPageModule),
       }
     ]
   },
