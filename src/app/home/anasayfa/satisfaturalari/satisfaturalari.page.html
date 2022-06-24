@@ -1,8 +1,8 @@
 <ion-header>
   <div class="hc-listsearchInputFrame" style="margin-top: 10px;">
     <ion-icon (click)="back()" name="chevron-back"></ion-icon>
-    <ion-input (input)="textChange($event.target.value)" class="hc-listinputs" placeholder="{{placeHolders[placeHolderIndex]}}"
-      type="text" style="margin-bottom: 5px;">
+    <ion-input (input)="textChange($event.target.value)" class="hc-listinputs"
+      placeholder="{{placeHolders[placeHolderIndex]}}" type="text" style="margin-bottom: 5px;">
       <ion-icon class="hc-listsearchicon" size="small" name="search"></ion-icon>
     </ion-input>
     <ion-icon (click)="forward()" name="chevron-forward"></ion-icon>
@@ -14,7 +14,7 @@
       <div class="hc-listleftFrame" style="flex-direction: column;">
         <ion-label class="hc-listfisNo">&ensp;{{fis.fisNo}}&ensp;</ion-label>
       </div>
-      <a class="hc-listrightFrame" (click) = "openSettingsMenu($event,fis)">
+      <a class="hc-listrightFrame" (click)="openSettingsMenu($event,fis)">
         <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
       </a>
       <div class="hc-listmiddleFrame" (click)="middleClick()">
@@ -43,35 +43,21 @@
           <div class="hc-listinsideFrames" style="border-width: 0px;">
             <ion-label style="color:blue;" class="hc-listArsiv">TaslakEArşiv - Satış</ion-label>
           </div>
-          <div class="hc-listinsideFrames"  style="border-width: 0px;">
-           <ion-label style="color: green;" (click)="gonderState=!gonderState" class="gonder" *ngIf="gonderState">
+          <div class="hc-listinsideFrames" style="border-width: 0px;">
+            <ion-label style="color: green;" (click)="gonderState=!gonderState" class="gonder" *ngIf="gonderState">
               Gönderildi
-           </ion-label>
-           <button class="hc-gonderButton" (click)="gonderState=!gonderState" *ngIf="!gonderState">
+            </ion-label>
+            <button class="hc-gonderButton" (click)="gonderState=!gonderState" *ngIf="!gonderState">
               <ion-icon name="send"></ion-icon>
               <ion-label>Gönder</ion-label>
-           </button>
+            </button>
           </div>
         </div>
-        <!-- <div class="hc-listselectionMenu">
-          <div class="hc-listinsideFrames2" *ngFor="let item of popoverData">
-            <ion-icon name="{{item.icon}}"></ion-icon>
-            <ion-label style="text-align: center;">{{item.title}}</ion-label>
-          </div>
-        </div> -->
       </div>
-      
- 
     </div>
-
-
   </div>
-  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent">
-
-  </div>
-  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent;display: flex;">
-
-  </div>
+  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent"></div>
+  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent;display: flex;"></div>
 </ion-content>
 <div class="hc-listbottomFrame">
   <ion-button (click)="bottomButtonClick()" class="hc-listaddButton">

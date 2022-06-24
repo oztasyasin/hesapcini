@@ -21,6 +21,11 @@
         <ion-label class="hc-cekText" style="font-weight:bolder">00000000000000000000</ion-label>
       </div>
     </div>
+    <div style="align-items: center;width: 100%;position:absolute;height:30px;display: flex;bottom: 0px;">
+      <ion-label class="hc-listcariAd" style="margin-left: 10px;">
+        Kendi Çekimiz
+      </ion-label>
+    </div>
   </div>
   <div class="hc-container">
     <ion-grid class="hc-filterGrid">
@@ -32,13 +37,13 @@
             </div>
             <div class="hc-listmiddleFrame" style="margin: auto;width: 98%;">
               <div class="hc-listtopFrame" style="margin-top: 5px;">
-                <ion-label class="hc-listcariAd">{{item.status}}</ion-label>
+                <ion-label class="hc-listcariAd" style="margin-left: 5px;">{{item.trCode}}</ion-label>
                 <ion-label class="hc-listtarih">{{item.dateTime}}</ion-label>
               </div>
               <div class="hc-listfisInfoFrame" style="flex-direction: column;gap:10px;margin-top: 10px;">
                 <div class="hc-lines">
-                  <ion-label class="hc-cekText">Tr Kodu:</ion-label>
-                  <ion-label class="hc-cekText" style="font-weight:bolder">{{item.trCode}}</ion-label>
+                  <ion-label class="hc-cekText">Son Durum:</ion-label>
+                  <ion-label class="hc-cekText" style="font-weight:bolder">{{item.statu}}</ion-label>
                 </div>
                 <div class="hc-lines">
                   <ion-label class="hc-cekText">Cari:</ion-label>

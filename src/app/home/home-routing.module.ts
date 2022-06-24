@@ -62,6 +62,10 @@ const routes: Routes = [
       {
         path: 'sehirler',
         loadChildren: () => import('./sehirler/sehirler.module').then(m=>m.SehirlerPageModule),
+      },
+      {
+        path: 'musteriekle',
+        loadChildren: () => import('./musteriekle/musteriekle.module').then( m => m.MusterieklePageModule)
       }
     ]
   },
@@ -70,6 +74,7 @@ const routes: Routes = [
     redirectTo: '/home/tabs/anasayfa',
     pathMatch: 'full'
   }
+
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CeksenetService {
   cekSenetTransList=[
     {
+      statu: "Tahsil Edildi",
       status: 'Kendi Çekimiz',
       dateTime: '22.10.2021',
       trCode: 'Çek Çıkış(Cari Hesaba)',
@@ -13,6 +14,7 @@ export class CeksenetService {
       bankAccountId: 'cüneyt bsmv'
     },
     {
+      statu: 'Bankada',
       status: 'Tahsil Edildi',
       dateTime: '22.10.2021',
       trCode: 'Çek Ödemesi',

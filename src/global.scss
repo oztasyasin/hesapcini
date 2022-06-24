@@ -150,6 +150,7 @@ ion-content {
   border-radius: 5px;
   text-align: center;
   align-items: center;
+  text-align: center;
   justify-content: center;
   background-color: white;
 }
@@ -711,7 +712,8 @@ ion-checkbox {
   border-width: 0px;
   border-right-width: 1px;
 }
-.hc-listinsideFrames2{
+
+.hc-listinsideFrames2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -725,9 +727,11 @@ ion-checkbox {
   aspect-ratio: 1;
   height: 0px;
 }
+
 .hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listselectionMenu>.hc-listinsideFrames2 {
   height: fit-content;
 }
+
 .hc-listbaslik {
   height: 50%;
   display: flex;
@@ -891,15 +895,16 @@ ion-checkbox {
 // }
 
 .hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listfisInfoFrame>.hc-listinsideFrames>.hc-listicerik {
-  color: #fc9c1c; 
+  color: #fc9c1c;
 }
 
-.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listtopFrame>.hc-listcariAd{
- color: #fc9c1c; 
+.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listtopFrame>.hc-listcariAd {
+  color: #fc9c1c;
 }
-.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listtopFrame>.hc-listtarih{
-  color: #fc9c1c; 
- }
+
+.hc-listrightFrame:hover~.hc-listmiddleFrame>.hc-listtopFrame>.hc-listtarih {
+  color: #fc9c1c;
+}
 
 .hc-listrightFrame:hover~.hc-listmiddleFrame {
   background-color: white;
@@ -1128,7 +1133,7 @@ ion-checkbox {
   margin: auto;
   justify-content: flex-end;
   display: flex;
-  color:#6E2798;
+  color: #6E2798;
   text-align: center;
   align-items: center;
 }
@@ -1171,28 +1176,85 @@ ion-checkbox {
   margin-top: 5px;
 }
 
-.bottom{
+.bottom {
   height: 10px;
   width: 100%;
   background-color: #6E2798;
 }
-.hc-sehirlerFrame{
+
+.hc-sehirlerFrame {
   min-height: 40px;
-  width: clamp(300px,85%,400px);
+  width: clamp(300px, 85%, 400px);
 
 }
-.hc-sehirlerFrame:active{
+
+.hc-sehirlerFrame:active {
   background-color: #fc9c1c;
 }
-.hc-sehirLabel{
+
+.hc-sehirLabel {
   font-size: small;
   font-weight: bold;
 }
-.hc-listoptions{
+
+.hc-listoptions {
   pointer-events: none;
 }
-.hc-popover{
-  --max-width:50%;
-  --backdrop-opacity:0;
-  --background:transparent;
+
+.hc-popover {
+  --max-width: 50%;
+  --backdrop-opacity: 0.5;
+  --background: rgba(0, 0, 0, 0.2);
+}
+
+.hc-cariGrid {
+  width: clamp(300px, 80%, 600px);
+  // width: 100%;
+  margin-top: 10px;
+  background: transparent;
+  ion-col{
+    background: rgba(0,0,0,0.1);
+  }
+  ion-row{
+    
+  }
+}
+
+.hc-toggle {
+  --background: rgba(0, 0, 0, 0.2);
+  --background-checked: #6E2798;
+}
+
+.hc-segment {
+  color: #6E2798;
+  text-transform: none;
+  font-size: small;
+  font-weight: bold;
+}
+
+::part(indicator-background) {
+  background-color: #fc9c1c;
+}
+
+.hc-cariLeftFrame {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.s{
+  font-size: small;
+}
+.t-m{
+  max-height: 40px !important;
+  background-color: white;
+}
+.borderN{
+  border-style: none;
+}
+
+.radioItem{
+  --border-style: none;
+  --transition: none;
+  display: flex;
 }

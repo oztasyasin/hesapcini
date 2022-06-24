@@ -13,6 +13,9 @@ export class CarilistesiPage implements OnInit {
   ngOnInit() {
   }
   cariClick(){
-    this.router.navigateByUrl('/home/tabs/caribilgileri')
+    this.router.navigateByUrl('/home/tabs/caribilgileri');
+  }
+  duzenle(){
+    this.router.navigateByUrl('/home/tabs/musteriekle');
   }
 }

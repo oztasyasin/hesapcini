@@ -1,0 +1,268 @@
+<ion-header>
+  <ion-segment class="segmentFrame" [(ngModel)]="segment" value="musteri" mode="md">
+    <ion-segment-button class="hc-segment" value="musteri">
+      <ion-label>Müşteri Bilgileri</ion-label>
+    </ion-segment-button>
+    <ion-segment-button class="hc-segment" value="fatura">
+      <ion-label>Fatura Bilgileri</ion-label>
+    </ion-segment-button>
+    <ion-segment-button class="hc-segment" value="diger">
+      <ion-label>Diğer</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content style="display: flex;justify-content:center;align-items:center">
+  <ion-card style="--background:rgba(0,0,0,0.1);">
+    <ion-card-content style="--background:rgba(0,0,0,0.1)">
+      <ion-grid class="hc-cariGrid" *ngIf="segment=='musteri'">
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">Cari Tipi</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-select interface="popover" class="hc-inputs t-m"
+              style="align-items:flex-end; justify-content:flex-end">
+              <ion-select-option value="bacon">Müşteri/Tedarikçi</ion-select-option>
+              <ion-select-option value="bacon">Müşteri</ion-select-option>
+              <ion-select-option value="bacon">Tedarikçi</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">Ünvan</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs t-m"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                E-Posta
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs t-m"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Telefon
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs t-m"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Açılış Bakiyesi
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <ion-input class="hc-inputs t-m">
+            </ion-input>
+          </ion-col>
+          <ion-col size="1.5">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Borç
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <ion-select interface="popover" class="hc-inputs t-m"
+              style="align-items:flex-end; justify-content:flex-end">
+              <ion-select-option value="borc">Borç</ion-select-option>
+              <ion-select-option value="alacak">Alacak</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Durumu
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="inputs t-m borderN"
+              style="min-width: 100%;min-height: 50px;justify-content: space-between;align-items: center;display: flex;background-color: rgba(255,255,255,0.3);">
+              <ion-label style="color:black;margin-left: 20px;">{{stateText}}</ion-label>
+              <ion-toggle class="hc-toggle" (click)="toggleChange()" checked="true" mode="ios"
+                style="margin-right: 20px;">
+              </ion-toggle>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid class="hc-cariGrid" *ngIf="segment=='fatura'">
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Adres
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs t-m"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Şehir
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs t-m"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                İlçe
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs t-m"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Şirket Tipi
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="inputs  t-m"
+              style="overflow: hidden;border-style: solid;border-width:1px; min-width: 100%;min-height: 50px;justify-content: space-between;align-items: center;display: flex;">
+              <ion-radio-group [(ngModel)]="radioValue" style="flex-direction: row;display: flex;">
+                <ng-container>
+                  <ion-label class="hc-listcariAd s">Kurumsal</ion-label>
+                  <ion-radio slot="end" value="kurumsal"></ion-radio>
+                </ng-container>
+                <ng-container>
+                  <ion-label class="hc-listcariAd s">Bireysel</ion-label>
+                  <ion-radio slot="end" value="bireysel"></ion-radio>
+                </ng-container>
+              </ion-radio-group>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s" *ngIf="radioValue=='bireysel'">
+                Tc No
+              </ion-label>
+              <ion-label class="hc-listcariAd s" *ngIf="radioValue=='kurumsal'">
+                Vergi No
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs  t-m">
+              <div class="hc-listrightFrame" style="width:25%;background-color: transparent;border-width: 0ch;">
+                <ion-button style="width: 100%;text-transform: none;--background:#6E2798">
+                  Getir
+                </ion-button>
+              </div>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <div class="hc-cariLeftFrame">
+              <ion-label class="hc-listcariAd s">
+                Vergi Dairesi
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input class="hc-inputs  t-m">
+              <ion-icon style="position: absolute;right:10px" name="search"></ion-icon>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ng-container *ngIf="radioValue=='bireysel'">
+          <ion-row>
+            <ion-col size="3">
+              <div class="hc-cariLeftFrame">
+                <ion-label class="hc-listcariAd s">
+                  Ad Soyad
+                </ion-label>
+              </div>
+            </ion-col>
+            <ion-col size="9">
+              <ion-input class="hc-inputs  t-m"></ion-input>
+            </ion-col>
+          </ion-row>
+        </ng-container>
+
+      </ion-grid>
+
+      <ion-grid class="hc-cariGrid" *ngIf="segment=='diger'">
+        <ion-row>
+          <ion-col>
+            <ion-input class="hc-inputs  t-m">
+              <ion-label class="inputPlaceHolders" style="top:-5px;">Telefon</ion-label>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input class="hc-inputs t-m">
+              <ion-icon style="position: absolute;right:10px" name="search"></ion-icon>
+              <ion-label class="inputPlaceHolders" style="top:-5px;">Kategori Kodu 1</ion-label>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input class="hc-inputs t-m">
+              <ion-icon style="position: absolute;right:10px" name="search"></ion-icon>
+              <ion-label class="inputPlaceHolders" style="top:-5px;">Kategori Kodu 2</ion-label>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let item of sorumlular;let i = index;">
+          <ion-col>
+            <ion-input class="hc-inputs t-m">
+              <ion-label class="inputPlaceHolders" style="top:-5px;">Sorumlu {{i+1}}</ion-label>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="11">
+            <ion-label style="color:#fc9c1c;float: right;" (click)="sorumluEkle()">Sorumlu Ekle</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
