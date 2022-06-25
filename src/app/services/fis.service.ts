@@ -72,9 +72,15 @@ export class FisService {
     return this.fisler;
   }
   test(){
-
-
-
   
+  }
+  tarihleriKısalt(){
+    this.fisler.forEach(fis => {
+      let tarih = fis.tarih;
+      let year = tarih.split('.')[2];
+      let str = year.toString().split('')[2]+year.toString().split('')[3];
+      fis.tarih = tarih.split('.')[0]+'.'+tarih.split('.')[1]+"."+str;
+    });
+    return this.fisler;
   }
 }

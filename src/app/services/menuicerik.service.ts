@@ -384,7 +384,7 @@ export class MenuicerikService {
         {
           title: 'Projeler',
           state: false,
-          isFavourite: false,
+          isFavourite: true,
           description: "Kart Açıklaması",
           activeText: ""
         }

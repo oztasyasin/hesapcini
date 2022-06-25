@@ -66,6 +66,10 @@ const routes: Routes = [
       {
         path: 'musteriekle',
         loadChildren: () => import('./musteriekle/musteriekle.module').then( m => m.MusterieklePageModule)
+      },
+      {
+        path: 'proje',
+        loadChildren: () => import('./proje/proje.module').then( m => m.ProjePageModule)
       }
     ]
   },
@@ -74,6 +78,7 @@ const routes: Routes = [
     redirectTo: '/home/tabs/anasayfa',
     pathMatch: 'full'
   }
+
 
 ];
 

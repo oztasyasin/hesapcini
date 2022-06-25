@@ -79,6 +79,9 @@ export class AnasayfaPage implements OnInit {
     if(button.title=="Satış Fiyatı"){
       this.router.navigateByUrl('/home/tabs/satisfiyatlari')
     }
+    if(button.title=="Projeler"){
+      this.router.navigateByUrl('/home/tabs/proje');
+    }
   }
   screen(){
    

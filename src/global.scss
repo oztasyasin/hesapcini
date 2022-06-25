@@ -1020,8 +1020,8 @@ ion-checkbox {
   font-weight: bold;
   background-color: white;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  margin-left: 5px;
+  top: -5px;
 }
 
 .dateText {
@@ -1212,12 +1212,12 @@ ion-checkbox {
   // width: 100%;
   margin-top: 10px;
   background: transparent;
-  ion-col{
-    background: rgba(0,0,0,0.1);
+
+  ion-col {
+    background: white;
   }
-  ion-row{
-    
-  }
+
+  ion-row {}
 }
 
 .hc-toggle {
@@ -1242,19 +1242,145 @@ ion-checkbox {
   display: flex;
   align-items: center;
 }
-.s{
+
+.s {
   font-size: small;
 }
-.t-m{
+
+.t-m {
   max-height: 40px !important;
   background-color: white;
 }
-.borderN{
+
+.borderN {
   border-style: none;
 }
 
-.radioItem{
+.radioItem {
   --border-style: none;
   --transition: none;
   display: flex;
+}
+
+.hc-projeTotalsFrame {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fc9c1c;
+  margin-top: 10px;
+  width: 98%;
+  margin: auto;
+  height: clamp(100px, 10%, 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.minimize {
+  height: clamp(40px, 8%, 70px);
+  // background-color: #112D4E;
+
+}
+
+.r {
+  color: red;
+}
+
+.g {
+  color: green;
+}
+
+.b {
+  color: blue;
+}
+
+.o {
+  color: orange;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sizeM {
+  font-size: medium;
+}
+
+.hc-projeButton {
+  margin: auto;
+  width: clamp(300px, 90%, 500px);
+}
+
+.contentFrame {
+  margin: auto;
+  width: clamp(350px, 90%, 550px);
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.col {
+  border-style: solid;
+  border-width: 0ch;
+  border-right-width: 1px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+}
+
+.left-w {
+  border-left-width: 1px;
+}
+
+.noWidth {
+  border-width: 0px;
+}
+
+.bgR {
+  background-color: red;
+}
+
+.bgG {
+  background-color: green;
+  ;
+}
+
+.bgO {
+  background-color: orange;
+}
+
+.bgB {
+  background-color: blue;
+}
+
+.hc-projeGrid {
+  font-size: small;
+  background-color: transparent;
+
+  ion-col {
+    background-color: transparent;
+    --background: transparent;
+  }
+
+  ion-row {
+    background-color: transparent;
+    --background: transparent;
+  }
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.hc-projeCols {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-radius: 10px;
 }
