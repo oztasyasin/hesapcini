@@ -261,8 +261,9 @@ ion-content {
 }
 
 .underLogo {
+  margin: auto;
   width: 80%;
-  margin-right: 10%;
+  // margin-right: 10%;
   height: fit-content;
   overflow: hidden;
   display: flex;
@@ -1381,6 +1382,8 @@ ion-checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: solid;
-  border-radius: 10px;
+  // border-style: solid;
+  // border-radius: 10px;
+  // border-width: 0px;
+  // border-bottom-width: 2px;
 }

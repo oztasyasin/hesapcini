@@ -9,7 +9,7 @@ import { FisService } from 'src/app/services/fis.service';
 export class ProjePage implements OnInit {
 
   constructor(private fisService:FisService) { }
-  states = [false,false,false,false];
+  states = [false,false,false,false,false];
   fisler = [];
   ngOnInit() {
     this.fisler = this.fisService.tarihleriKısalt();
@@ -25,5 +25,11 @@ export class ProjePage implements OnInit {
   }
   odemelerClick(){
     this.states[3] = !this.states[3];
+  }
+  siparisHareketleri(){
+    this.states[4] = !this.states[4];
+  }
+  stokHareketleriClick(){
+    this.states[5] = !this.states[5];
   }
 }
