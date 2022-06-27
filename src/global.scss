@@ -136,12 +136,14 @@ ion-content {
 }
 
 .hc-inputs {
+  display: flex;
   color: black;
   font-weight: bold;
   font-size: small;
   max-width: 85%;
   min-width: 80%;
-  height: 50px;
+  min-height: 50px;
+  height: fit-content;
   border-width: 1px;
   border-color: transparent;
   border-bottom-color: #fc9c1c;
@@ -1006,8 +1008,10 @@ ion-checkbox {
   border-radius: 5px;
   background-color: white;
   text-align: center;
+  max-height: fit-content;
   max-width: 100%;
-  max-height: clamp(40px, 100%, 60px);
+  min-height: clamp(40px, 100%, 60px);
+  
   --color: black;
   border-style: solid;
   border-width: 1px;
