@@ -28,8 +28,7 @@
         <ion-row>
           <ion-col>
             <ion-label class="inputPlaceHolders" style="margin-left: 5px;top:-5px;">Ünvan</ion-label>
-            <ion-input class="hc-inputs">
-            </ion-input>
+            <ion-input class="hc-inputs"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -128,9 +127,10 @@
         <ion-row>
           <ion-col>
             <ion-label class="inputPlaceHolders">Vergi Dairesi</ion-label>
-            <ion-input class="hc-inputs">
-              <ion-icon style="position: absolute;right:10px" name="search"></ion-icon>
-            </ion-input>
+            <ion-input size="20" class="hc-inputs"></ion-input>
+            <div class="hc-inputsIconFrame">
+              <ion-icon class="hc-inputsIcon" name="search"></ion-icon>
+            </div>
           </ion-col>
         </ion-row>
         <ng-container *ngIf="radioValue=='bireysel'">
@@ -165,7 +165,7 @@
             </ion-input>
           </ion-col>
         </ion-row>
-        <ion-row  *ngFor="let item of sorumlular;let i = index;">
+        <ion-row *ngFor="let item of sorumlular;let i = index;">
           <ion-col>
             <ion-label class="inputPlaceHolders">Sorumlu {{i+1}}</ion-label>
             <ion-input class="hc-inputs"></ion-input>

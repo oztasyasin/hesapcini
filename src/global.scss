@@ -1012,6 +1012,8 @@ ion-checkbox {
   border-style: solid;
   border-width: 1px;
   border-color: #fc9c1c;
+  display: flex;
+  flex-direction: row;
 }
 
 .inputPlaceHolders {
@@ -1021,7 +1023,7 @@ ion-checkbox {
   font-weight: bold;
   background-color: white;
   position: absolute;
-  margin-left: 5px;
+  left: 5px;
   top: -5px;
 }
 
@@ -1386,4 +1388,25 @@ ion-checkbox {
   // border-radius: 10px;
   // border-width: 0px;
   // border-bottom-width: 2px;
+}
+.hc-inputsIcon{
+  font-size: 20px;
+  color: #6E2798;
+}
+.hc-inputsIconFrame{
+  height: 100%;
+  aspect-ratio: 1;
+  right: 6px;                                                         
+  top: 6px;
+  z-index: 22;
+  font-size: 20px;
+  display: flex;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.with-icon{
+
 }
