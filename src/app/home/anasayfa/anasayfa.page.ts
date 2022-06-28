@@ -82,6 +82,9 @@ export class AnasayfaPage implements OnInit {
     if(button.title=="Projeler"){
       this.router.navigateByUrl('/home/tabs/proje');
     }
+    if(button.title=="Aylık Özet Raporu"){
+      this.router.navigateByUrl('/home/tabs/raporlar');
+    }
   }
   screen(){
    

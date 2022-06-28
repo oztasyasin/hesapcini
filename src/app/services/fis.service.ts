@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class FisService {
   fisler=[
     {
-      cari: "Furkan Kadıoğlu",
+      cari: "Furkan Kadıoğlu Uzun Cari İsmi Test İçin",
       fisNo: '12B2131230000000',
       tarih: "20.04.2022",
       tutar: 540,

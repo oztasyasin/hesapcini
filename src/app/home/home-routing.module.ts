@@ -70,6 +70,10 @@ const routes: Routes = [
       {
         path: 'proje',
         loadChildren: () => import('./proje/proje.module').then( m => m.ProjePageModule)
+      },
+      {
+        path: 'raporlar',
+        loadChildren: () => import('./raporlar/raporlar.module').then( m => m.RaporlarPageModule)
       }
     ]
   },
@@ -78,6 +82,7 @@ const routes: Routes = [
     redirectTo: '/home/tabs/anasayfa',
     pathMatch: 'full'
   }
+
 
 
 ];

@@ -1,0 +1,122 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <ion-toggle [(ngModel)]="rapor" mode="ios"></ion-toggle>
+  <div style="height: 10px;"></div>
+  <div style="height: fit-content;width:100%;display:flex;flex-direction:column;gap:5px" *ngIf="rapor">
+    <div class="hc-listoutsideFrame" *ngFor="let item of borclar;">
+      <div class="hc-listleftFrame" style="flex-direction: column;">
+      </div>
+      <a class="hc-listrightFrame">
+        <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
+      </a>
+      <div class="hc-listmiddleFrame">
+        <div class="hc-listtopFrame" style="width: 90%;margin-left:5%;margin-top: 5px;">
+          <ion-label class="hc-listcariAd">Cari Ad</ion-label>
+        </div>
+        <div class="hc-listfisInfoFrame" style="flex:1">
+          <div class="hc-listinsideFrames">
+            <ion-label class="hc-listbaslik">Borç</ion-label>
+            <ion-label class="hc-listicerik" style="color:red">{{item.borc}}</ion-label>
+          </div>
+          <div class="hc-listinsideFrames">
+            <ion-label class="hc-listbaslik"> Alacak</ion-label>
+            <ion-label class="hc-listicerik" style="color:blue">{{item.alacak}}</ion-label>
+          </div>
+          <div class="hc-listinsideFrames" style="border-width: 0px;">
+            <ion-label class="hc-listbaslik" *ngIf="item.alacak>item.borc">Bakiye Alacak</ion-label>
+            <ion-label class="hc-listbaslik" *ngIf="item.borc>item.alacak">Bakiye Borç</ion-label>
+            <ion-label class="hc-listicerik" style="color:red" *ngIf="item.borc>item.alacak">{{item.bakiye}}</ion-label>
+            <ion-label class="hc-listicerik" style="color:blue" *ngIf="item.alacak>item.borc">{{item.bakiye}}
+            </ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height: fit-content;width:100%;display:flex;flex-direction:column;gap:5px" *ngIf="!rapor">
+    <div class="hc-listoutsideFrame">
+      <div class="hc-listleftFrame" style="flex-direction: column;">
+        <ion-label class="hc-listfisNo">&ensp;0000000000000000&ensp;</ion-label>
+      </div>
+      <a class="hc-listrightFrame">
+        <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
+      </a>
+      <div class="hc-listmiddleFrame">
+        <div class="hc-listtopFrame" style="width: 90%;margin-left:5%;margin-top: 5px;">
+          <ion-label class="hc-listcariAd">Açılış Fişi</ion-label>
+          <ion-label class="hc-listtarih">Tarih: 00.00.0000&ensp;</ion-label>
+        </div>
+        <div class="hc-listfisInfoFrame" style="flex:1">
+          <div class="hc-listinsideFrames" style="height: 80%;">
+            <div class="hc-frameSplitter align-b">
+              <ion-label class="hc-listbaslik">Cari Ünvanı</ion-label>
+            </div>
+            <div class="hc-frameSplitter align-t">
+              <ion-label class="hc-listicerik">Haluk Teker - Turkuaz Bilgisayar</ion-label>
+            </div>
+
+          </div>
+          <div class="hc-listinsideFrames" style="height: 80%;">
+            <div class="hc-frameSplitter align-b">
+              <ion-label class="hc-listbaslik">Tarih</ion-label>
+            </div>
+            <div class="hc-frameSplitter align-t">
+              <ion-label class="hc-listicerik">00.00.0000</ion-label>
+            </div>
+          </div>
+          <div class="hc-listinsideFrames" style="height: 80%;border-width: 0px;">
+            <div class="hc-frameSplitter align-b">
+              <ion-label class="hc-listbaslik">Tutar</ion-label>
+            </div>
+            <div class="hc-frameSplitter align-t">
+              <ion-label class="hc-listicerik">0000$</ion-label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hc-listoutsideFrame">
+      <div class="hc-listleftFrame" style="flex-direction: column;">
+        <ion-label class="hc-listfisNo">&ensp;Donem-0000&ensp;</ion-label>
+      </div>
+      <a class="hc-listrightFrame">
+        <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
+      </a>
+      <div class="hc-listmiddleFrame">
+        <div class="hc-listtopFrame" style="width: 90%;margin-left:5%;margin-top: 5px;height: fit-content;">
+          <ion-label class="hc-listcariAd">Cari Unvanı</ion-label>
+        </div>
+        <div class="hc-listfisInfoFrame" style="flex:1;height: fit-content;">
+          <div class="hc-listinsideFrames" >
+            <div class="hc-frameSplitter align-b">
+              <ion-label class="hc-listbaslik">Borç</ion-label>
+            </div>
+            <div class="hc-frameSplitter align-t">
+              <ion-label class="hc-listicerik">0000$</ion-label>
+            </div>
+          </div>
+          <div class="hc-listinsideFrames" >
+            <div class="hc-frameSplitter align-b">
+              <ion-label class="hc-listbaslik">Alacak</ion-label>
+            </div>
+            <div class="hc-frameSplitter align-t">
+              <ion-label class="hc-listicerik">0000$</ion-label>
+            </div>
+          </div>
+          <div class="hc-listinsideFrames" style="border-width: 0px;">
+            <div class="hc-frameSplitter align-b">
+              <ion-label class="hc-listbaslik">Bakiye</ion-label>
+            </div>
+            <div class="hc-frameSplitter align-t">
+              <ion-label class="hc-listicerik">0000$</ion-label>
+            </div>
+          </div>
+        </div>
+        <ion-label class="hc-totalLabel">Toplam:&ensp;00000$</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>

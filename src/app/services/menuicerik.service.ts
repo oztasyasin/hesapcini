@@ -54,7 +54,7 @@ export class MenuicerikService {
         {
           title: 'Aylık Özet Raporu',
           state: false,
-          isFavourite: false,
+          isFavourite: true,
           description: "Kart Açıklaması",
           activeText: ""
         }
@@ -67,7 +67,7 @@ export class MenuicerikService {
         {
           title: 'Ürün Kartları',
           state: false,
-          isFavourite: true,
+          isFavourite: false,
           description: "Kart Açıklaması",
           activeText: ""
         },
@@ -156,7 +156,7 @@ export class MenuicerikService {
         {
           title: 'Alış Faturaları',
           state: false,
-          isFavourite: true,
+          isFavourite: false,
           description: "Kart Açıklaması",
           activeText: ""
         },
@@ -232,14 +232,14 @@ export class MenuicerikService {
         {
           title: 'Kasa',
           state: false,
-          isFavourite: true,
+          isFavourite: false,
           description: "Kart Açıklaması",
           activeText: ""
         },
         {
           title: 'Banka Hesapları',
           state: false,
-          isFavourite: true,
+          isFavourite: false,
           description: "Kart Açıklaması",
           activeText: ""
         },

@@ -140,8 +140,6 @@ ion-content {
   color: black;
   font-weight: bold;
   font-size: small;
-  max-width: 85%;
-  min-width: 80%;
   min-height: 50px;
   height: fit-content;
   border-width: 1px;
@@ -656,6 +654,7 @@ ion-checkbox {
   flex-direction: column;
   font-size: small;
   font-weight: 400;
+  position: relative;
   justify-content: space-between;
 }
 
@@ -1413,4 +1412,27 @@ ion-checkbox {
 }
 .with-icon{
 
+}
+
+.hc-frameSplitter{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  word-wrap: break-word;
+  
+}
+.align-b{
+  height: fit-content;
+}
+.align-t{
+  align-items: flex-start;
+}
+.hc-totalLabel{
+  position: absolute;
+  display: flex;
+  bottom: 0px;
+  right: 10px;
+  font-size: small;
+  font-weight: bold;
 }

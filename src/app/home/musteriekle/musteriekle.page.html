@@ -14,58 +14,59 @@
 <ion-content style="display: flex;justify-content:center;align-items:center">
   <ion-card style="--background:white;">
     <ion-card-content style="--background:white">
-      <ion-grid class="hc-cariGrid" *ngIf="segment=='musteri'">
+      <ion-grid class="hc-cariGrid" *ngIf="segment=='musteri'" style="display: flex;flex-direction:column;gap:10px;">
         <ion-row>
-          <ion-col>
-            <ion-label class="inputPlaceHolders" style="margin-left: 5px;top:-5px;">Cari Tipi</ion-label>
-            <ion-select interface="popover" class="hc-inputs" style="align-items:flex-end; justify-content:flex-end">
-              <ion-select-option value="bacon">Müşteri/Tedarikçi</ion-select-option>
-              <ion-select-option value="bacon">Müşteri</ion-select-option>
-              <ion-select-option value="bacon">Tedarikçi</ion-select-option>
-            </ion-select>
+          <ion-col class="hc-inputs">
+            <ion-label class="inputPlaceHolders">Cari Tipi</ion-label>
+            <ion-input style="flex:1"></ion-input>
+            <div class="hc-inputsIconFrame">
+              <ion-icon class="hc-inputsIcon" name="search"></ion-icon>
+            </div>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
-            <ion-label class="inputPlaceHolders" style="margin-left: 5px;top:-5px;">Ünvan</ion-label>
-            <ion-input class="hc-inputs"></ion-input>
+          <ion-col class="hc-inputs">
+            <ion-label class="inputPlaceHolders">Ünvan</ion-label>
+            <ion-input style="flex:1"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
-            <ion-label class="inputPlaceHolders" style="margin-left: 5px;top:-5px;">E-Posta</ion-label>
-            <ion-input class="hc-inputs">
-            </ion-input>
+          <ion-col class="hc-inputs">
+            <ion-label class="inputPlaceHolders">E-Posta</ion-label>
+            <ion-input style="flex:1"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
-            <ion-label class="inputPlaceHolders" style="margin-left: 5px;top:-5px;">Telefon</ion-label>
-            <ion-input class="hc-inputs">
-            </ion-input>
+          <ion-col class="hc-inputs">
+            <ion-label class="inputPlaceHolders">Telefon</ion-label>
+            <ion-input style="flex:1"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size="7">
+          <!-- <ion-col size="7">
             <ion-label class="inputPlaceHolders" style="margin-left: 5px;top:-5px;">Açılış Bakiyesi</ion-label>
             <ion-input class="hc-inputs">
             </ion-input>
+          </ion-col> -->
+          <ion-col class="hc-inputs" size="7">
+            <ion-label class="inputPlaceHolders">Açılış Bakiyesi</ion-label>
+            <ion-input style="flex:1"></ion-input>
           </ion-col>
-          <ion-col size="5">
-            <ion-label class="inputPlaceHolders" style="margin-left: 5px;top:-5px;">Bakiye Türü</ion-label>
-            <ion-select interface="popover" class="hc-inputs" style="align-items:flex-end; justify-content:flex-end">
-              <ion-select-option value="borc">Borç</ion-select-option>
-              <ion-select-option value="alacak">Alacak</ion-select-option>
-            </ion-select>
+          <ion-col class="hc-inputs" size="5">
+            <ion-label class="inputPlaceHolders">Bakiye Türü</ion-label>
+            <ion-input style="flex:1"></ion-input>
+            <div class="hc-inputsIconFrame">
+              <ion-icon class="hc-inputsIcon" name="search"></ion-icon>
+            </div>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
+          <ion-col class="hc-inputs">
             <ion-label class="inputPlaceHolders">
               Durumu
             </ion-label>
             <div class="hc-inputs"
-              style="min-width: 100%;min-height: 50px;justify-content: space-between;align-items: center;display: flex;background-color: rgba(255,255,255,0.3);">
+              style="min-width: 100%;min-height: 50px;border-width: 0px;justify-content: space-between;align-items: center;display: flex;background-color: rgba(255,255,255,0.3);">
               <ion-label style="color:black;margin-left: 20px;">{{stateText}}</ion-label>
               <ion-toggle class="hc-toggle" (click)="toggleChange()" checked="true" mode="ios"
                 style="margin-right: 20px;">
@@ -112,22 +113,18 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
-            <ion-label class="inputPlaceHolders" *ngIf="radioValue=='bireysel'">
-              Tc No
-            </ion-label>
-            <ion-label class="inputPlaceHolders" *ngIf="radioValue=='kurumsal'">
-              Vergi No
-            </ion-label>
-            <ion-input class="hc-inputs">
-            </ion-input>
-            <ion-button slot="end"> Getir</ion-button>
+          <ion-col class="hc-inputs">
+            <ion-label class="inputPlaceHolders">Vergi No</ion-label>
+            <ion-input style="flex:1"></ion-input>
+            <div class="hc-inputsIconFrame">
+              <ion-icon class="hc-inputsIcon" name="search"></ion-icon>
+            </div>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
+          <ion-col class="hc-inputs">
             <ion-label class="inputPlaceHolders">Vergi Dairesi</ion-label>
-            <ion-input size="20" class="hc-inputs"></ion-input>
+            <ion-input style="flex:1"></ion-input>
             <div class="hc-inputsIconFrame">
               <ion-icon class="hc-inputsIcon" name="search"></ion-icon>
             </div>
