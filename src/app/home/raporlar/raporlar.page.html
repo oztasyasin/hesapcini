@@ -90,20 +90,20 @@
           <ion-label class="hc-listcariAd">Cari Unvanı</ion-label>
         </div>
         <div class="hc-listfisInfoFrame" style="flex:1;height: fit-content;">
-          <div class="hc-listinsideFrames" >
+          <div class="hc-listinsideFrames">
             <div class="hc-frameSplitter align-b">
               <ion-label class="hc-listbaslik">Borç</ion-label>
             </div>
             <div class="hc-frameSplitter align-t">
-              <ion-label class="hc-listicerik">0000$</ion-label>
+              <ion-label class="hc-listicerik" style="color:red">0000$</ion-label>
             </div>
           </div>
-          <div class="hc-listinsideFrames" >
+          <div class="hc-listinsideFrames">
             <div class="hc-frameSplitter align-b">
               <ion-label class="hc-listbaslik">Alacak</ion-label>
             </div>
             <div class="hc-frameSplitter align-t">
-              <ion-label class="hc-listicerik">0000$</ion-label>
+              <ion-label class="hc-listicerik" style="color: blue;">0000$</ion-label>
             </div>
           </div>
           <div class="hc-listinsideFrames" style="border-width: 0px;">
@@ -117,6 +117,77 @@
         </div>
         <ion-label class="hc-totalLabel">Toplam:&ensp;00000$</ion-label>
       </div>
+    </div>
+    <div class="hc-listoutsideFrame" style="height: fit-content;">
+      <div class="hc-listleftFrame" style="flex-direction: column;">
+        <ion-label class="hc-listfisNo">&ensp;0000000000000000&ensp;</ion-label>
+      </div>
+      <a class="hc-listrightFrame">
+        <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
+      </a>
+      <div class="hc-listmiddleFrame">
+        <div class="hc-listtopFrame" style="width: 90%;margin-left:5%;margin-top: 5px;">
+          <ion-label class="hc-listcariAd">Açılış Fişi</ion-label>
+          <ion-label class="hc-listtarih">Tarih: 00.00.0000&ensp;</ion-label>
+        </div>
+        <div class="hc-listfisInfoFrame" style="flex:1;flex-direction: column;height: fit-content;margin-top: 10px;">
+          <div class="hc-lines w-90">
+            <ion-label class="hc-cekText">Ambar:</ion-label>
+            <ion-label class="hc-cekText" style="font-weight:bolder">Tarsus Ambar</ion-label>
+          </div>
+          <div class="hc-lines w-90">
+            <ion-label class="hc-cekText">Cari Ünvanı:</ion-label>
+            <ion-label class="hc-cekText" style="font-weight:bolder">cariAdı</ion-label>
+          </div>
+          <div class="hc-lines w-90">
+            <ion-label class="hc-cekText">Ürün Adı:</ion-label>
+            <ion-label class="hc-cekText" style="font-weight:bolder">ürünAdı</ion-label>
+          </div>
+          <div class="hc-lines w-90">
+            <ion-label class="hc-cekText">Birim:</ion-label>
+            <ion-label class="hc-cekText" style="font-weight:bolder">ADT</ion-label>
+          </div>
+          <div class="hc-lines w-90">
+            <ion-label class="hc-cekText">Fiili Stok:</ion-label>
+            <ion-label class="hc-cekText" style="font-weight:bolder">123</ion-label>
+          </div>
+          <div class="hc-listbottomFrame" style="position: relative;height: fit-content;margin-top: 10px;">
+            <div class="hc-listinsideFrames">
+              <ion-label class="hc-listbaslik" style="text-decoration:underline;">Giriş</ion-label>
+              <div class="hc-lines">
+                <ion-label class="hc-listibaslik">Miktar:</ion-label>
+                <ion-label class="hc-listicerik">000</ion-label>
+              </div>
+              <div class="hc-lines">
+                <ion-label class="hc-listibaslik">Fiyat:</ion-label>
+                <ion-label class="hc-listicerik">000$</ion-label>
+              </div>
+              <div class="hc-lines">
+                <ion-label class="hc-listibaslik">Tutar:</ion-label>
+                <ion-label class="hc-listicerik">000$</ion-label>
+              </div>
+            </div>
+            <div class="hc-listinsideFrames" style="border-width: 0px;">
+              <ion-label class="hc-listbaslik" style="text-decoration:underline;">Çıkış</ion-label>
+              <div class="hc-lines">
+                <ion-label class="hc-listibaslik">Miktar:</ion-label>
+                <ion-label class="hc-listicerik">000</ion-label>
+              </div>
+              <div class="hc-lines">
+                <ion-label class="hc-listibaslik">Fiyat:</ion-label>
+                <ion-label class="hc-listicerik">000$</ion-label>
+              </div>
+              <div class="hc-lines">
+                <ion-label class="hc-listibaslik">Tutar:</ion-label>
+                <ion-label class="hc-listicerik">000$</ion-label>
+              </div>
+            </div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </ion-content>

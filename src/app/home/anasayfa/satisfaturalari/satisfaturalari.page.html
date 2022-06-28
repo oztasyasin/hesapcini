@@ -9,55 +9,55 @@
   </div>
 </ion-header>
 <ion-content>
-  <div class="hc-listcontainer">
-    <div class="hc-listoutsideFrame" *ngFor="let fis of fisler|filter:searchInput;let i=index">
-      <div class="hc-listleftFrame" style="flex-direction: column;">
-        <ion-label class="hc-listfisNo">&ensp;{{fis.fisNo}}&ensp;</ion-label>
+  <ion-card>
+    <ion-card-content class="hcCardContent">
+      <div class="hc-listoutsideFrame" style="width: 100%;border-width: 0px;border-radius: 0%;">
+        <div class="hc-listleftFrame" style="border-width: 0px;flex-direction: column;">
+          <ion-label class="hc-listfisNo">&ensp;00000000000000000&ensp;</ion-label>
+        </div>
+        <a class="hc-listrightFrame" (click)="openSettingsMenu($event,fis)" style="border-width: 0px;">
+          <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
+        </a>
+        <div class="hc-listmiddleFrame" (click)="middleClick()">
+          <div class="hc-listtopFrame" style="width: 90%;margin-left:5%">
+            <ion-label class="hc-listcariAd">Yasin Öztaş</ion-label>
+            <ion-label class="hc-listtarih">Tarih: 00.00.0000&ensp;</ion-label>
+          </div>
+          <div class="hc-listfisInfoFrame">
+            <div class="hc-listinsideFrames">
+              <ion-label class="hc-listbaslik">Fatura Tipi</ion-label>
+              <ion-label class="hc-listicerik">faturaTipi</ion-label>
+            </div>
+            <div class="hc-listinsideFrames">
+              <ion-label class="hc-listbaslik"> Ambar</ion-label>
+              <ion-label class="hc-listicerik">ambar</ion-label>
+            </div>
+            <div class="hc-listinsideFrames" style="border-width: 0px;">
+              <ion-label class="hc-listbaslik">Tutar</ion-label>
+              <ion-label class="hc-listicerik">0000₺ <br>0000$</ion-label>
+            </div>
+          </div>
+          <div class="hc-bottomInfoFrame">
+            <div class="hc-listinsideFrames" style="border-width: 0px;">
+              <ion-label style="color: red;" class="hc-listiptal">İptal</ion-label>
+            </div>
+            <div class="hc-listinsideFrames" style="border-width: 0px;">
+              <ion-label style="color:blue;" class="hc-listArsiv">TaslakEArşiv - Satış</ion-label>
+            </div>
+            <div class="hc-listinsideFrames" style="border-width: 0px;">
+              <ion-label style="color: green;" (click)="gonderState=!gonderState" class="gonder" *ngIf="gonderState">
+                Gönderildi
+              </ion-label>
+              <button class="hc-gonderButton" (click)="gonderState=!gonderState" *ngIf="!gonderState">
+                <ion-icon name="send"></ion-icon>
+                <ion-label>Gönder</ion-label>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <a class="hc-listrightFrame" (click)="openSettingsMenu($event,fis)">
-        <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
-      </a>
-      <div class="hc-listmiddleFrame" (click)="middleClick()">
-        <div class="hc-listtopFrame" style="width: 90%;margin-left:5%">
-          <ion-label class="hc-listcariAd">{{fis.cari}}</ion-label>
-          <ion-label class="hc-listtarih">Tarih: {{fis.tarih}}&ensp;</ion-label>
-        </div>
-        <div class="hc-listfisInfoFrame">
-          <div class="hc-listinsideFrames">
-            <ion-label class="hc-listbaslik">Fatura Tipi</ion-label>
-            <ion-label class="hc-listicerik">{{fis.faturaTipi}}</ion-label>
-          </div>
-          <div class="hc-listinsideFrames">
-            <ion-label class="hc-listbaslik"> Ambar</ion-label>
-            <ion-label class="hc-listicerik">{{fis.ambar}}</ion-label>
-          </div>
-          <div class="hc-listinsideFrames" style="border-width: 0px;">
-            <ion-label class="hc-listbaslik">Tutar</ion-label>
-            <ion-label class="hc-listicerik">{{fis.tutar}}₺ <br>{{123}}$</ion-label>
-          </div>
-        </div>
-        <div class="hc-bottomInfoFrame">
-          <div class="hc-listinsideFrames" style="border-width: 0px;">
-            <ion-label style="color: red;" class="hc-listiptal">İptal</ion-label>
-          </div>
-          <div class="hc-listinsideFrames" style="border-width: 0px;">
-            <ion-label style="color:blue;" class="hc-listArsiv">TaslakEArşiv - Satış</ion-label>
-          </div>
-          <div class="hc-listinsideFrames" style="border-width: 0px;">
-            <ion-label style="color: green;" (click)="gonderState=!gonderState" class="gonder" *ngIf="gonderState">
-              Gönderildi
-            </ion-label>
-            <button class="hc-gonderButton" (click)="gonderState=!gonderState" *ngIf="!gonderState">
-              <ion-icon name="send"></ion-icon>
-              <ion-label>Gönder</ion-label>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent"></div>
-  <div class="hc-listbottomFrame" style="position: relative;background-color:transparent;display: flex;"></div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 <div class="hc-listbottomFrame">
   <ion-button (click)="bottomButtonClick()" class="hc-listaddButton">

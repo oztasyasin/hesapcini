@@ -1,54 +1,88 @@
-<ion-header>
-  
-</ion-header>
-
 <ion-content>
-    <div class="hc-listcontainer">
-      <div class="hc-listoutsideFrame">
-        <div class="hc-listleftFrame hc-listCariLeftFrame">
-          <ion-icon name="person"></ion-icon>
+  <ion-card>
+    <ion-card-content class="hcCardContent">
+      <ion-row class="hcRows">
+        <ion-col class="bgM" style="max-width: 25px;justify-content: center;align-items: center;padding: 0%;margin: 0%;">
+          <ion-label class="hc-listfisNo" style="color:#fc9c1c;">&ensp;00000000000000000&ensp;</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-row style="justify-content: center;">
+            <ion-col size="11" class="hcSatisCol" style="justify-content: space-between;">
+              <ion-label class="MpurpleB">Yasin Öztaş</ion-label>
+              <ion-label class="SblackB">Bakiye: 0000$</ion-label>
+            </ion-col>
+            <ion-col size="10" class="hcSatisCol ul" style="justify-content: space-between;">
+              <ion-label>Alış</ion-label>
+              <ion-label class="SblackB">0000$</ion-label>
+            </ion-col>
+            <ion-col size="10" class="hcSatisCol ul" style="justify-content: space-between;">
+              <ion-label>Satış</ion-label>
+              <ion-label class="SblackB">0000$</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col class="bgM" style="max-width: 20px;"></ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content class="hcCardContent">
+      <div class="hcOutsideFrame">
+        <div class="hc-listleftFrame">
+          <ion-label class="hc-listfisNo">&ensp;00000000000000000&ensp;</ion-label>
         </div>
         <div class="hc-listrightFrame">
           <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
         </div>
-        <div class="hc-listmiddleFrame" style="width: 74%;" (click)="cariClick()">
-          <div class="hc-listtopFrame" style="margin: auto;width:95%">
+        <div class="hc-listmiddleFrame" style="width: 88%;justify-content: center;" (click)="cariClick()">
+          <div class="hc-listtopFrame" style="left:2%;width:96%;margin: 0%;top: 0px;position: absolute;">
             <ion-label class="hc-listcariAd">
               Yasin Öztaş
             </ion-label>
-            <ion-label class="hc-topRigthText">
-              Bakiye: 123123$
+            <ion-label class="hc-listtarih">
+              Bakiye: 0000$
             </ion-label>
           </div>
           <div class="hc-listfisInfoFrame" style="margin-top: 0%;height: 75%;">
             <div class="hc-listinsideFrames" style="border-width: 0px;height: 90%;">
-              <ion-label class="hc-listbaslik">
-                Bakiye
-              </ion-label>
-              <ion-label class="hc-listicerik">
-                123123$
-              </ion-label>
+              <div class="hc-frameSplitter align-b">
+                <ion-label class="hc-listbaslik ">
+                  Bakiye
+                </ion-label>
+              </div>
+              <div class="hc-frameSplitter align-t">
+                <ion-label class="hc-listicerik">
+                  123123$
+                </ion-label>
+              </div>
+            </div>
+            <div class="hc-listinsideFrames" style="border-width: 0px;height: 90%;">
+              <div class="hc-frameSplitter align-b">
+                <ion-label class="hc-listbaslik ">
+                  Bakiye
+                </ion-label>
+              </div>
+              <div class="hc-frameSplitter align-t">
+                <ion-label class="hc-listicerik">
+                  123123$
+                </ion-label>
+              </div>
+            </div>
+            <div class="hc-listinsideFrames" style="border-width: 0px;height: 90%;">
+              <div class="hc-frameSplitter align-b">
+                <ion-label class="hc-listbaslik ">
+                  Bakiye
+                </ion-label>
+              </div>
+              <div class="hc-frameSplitter align-t">
+                <ion-label class="hc-listicerik">
+                  123123$
+                </ion-label>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hc-cariSelectionMenu">
-          <div class="hc-listinsideFrames" style="height: 90%;" (click)="duzenle()">
-            <ion-icon class="hc-listselectionIcons" name="pencil"></ion-icon>
-            <ion-label class="hc-listselectionLabels">Düzenle</ion-label>
-          </div>
-          <div class="hc-listinsideFrames" style="height: 90%;">
-            <ion-icon class="hc-listselectionIcons" name="trash"></ion-icon>
-            <ion-label class="hc-listselectionLabels">Sil</ion-label>
-          </div>
-          <div class="hc-listinsideFrames" style="height: 90%;">
-            <ion-icon class="hc-listselectionIcons" name="newspaper"></ion-icon>
-            <ion-label class="hc-listselectionLabels">Cari Hareketleri</ion-label>
-          </div>
-          <div class="hc-listinsideFrames" style="height: 90%;border-width: 0px">
-            <ion-icon class="hc-listselectionIcons" style="display: block;" name="mail"></ion-icon>
-            <ion-label class="hc-listselectionLabels">Mail Gönder</ion-label>
-          </div>
-        </div>
       </div>
-    </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

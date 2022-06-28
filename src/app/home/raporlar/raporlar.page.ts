@@ -10,7 +10,7 @@ export class RaporlarPage implements OnInit {
 
   constructor(private service:BorcService) { }
   borclar = [];
-  rapor = true;
+  rapor = false;
   ngOnInit() {
     this.borclar = this.service.getborclar();
   }
