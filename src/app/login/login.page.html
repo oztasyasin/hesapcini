@@ -1,39 +1,58 @@
 <ion-content>
-    <div class="content" >
-    <div class="insideFrame">
-      <div class="logoFrame" style="background-color: white;">
-        <ion-img class="logo" [src]="logoSrc"></ion-img>
-      </div>
-      <div class="inputsFrame">
-        <input class="inputss" placeholder="Kullanıcı Adı" type="text">
-        <input class="inputss" placeholder="Şifre" type="password">
-      </div>
-      <div class="buttonFrame">
-        <button routerLink="/home" class="loginButton">
-          Giriş Yap
-        </button>
-      </div>
-      <div class="linksFrame">
-        <div class="navigationLinks">
-          <a routerLink="/forgotpassword" class="navigationLink">Şifreni mi unuttun?</a>
-          <label class="navigationText" for="">Hesabın yok mu?
-          <a routerLink="/register" routerLinkActive="active" class="navigationLink" for="">Kayıt Ol</a></label>
-        </div> 
-      </div>
-    </div>
+    <div class="hcContent" >
+    <ion-grid class="hcinsideGrid">
+      <ion-row>
+        <ion-col size="12">
+          <ion-img [src]="logoSrc" class="hcLogo"></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top: 40px;">
+        <ion-col>
+          <ion-label class="hcMorUl" style="text-decoration: none;">
+            Kullanıcı Girişi
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-input class="hcInputs" placeholder="E-Mail" type="mail"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top:5px">
+        <ion-col size="12">
+          <ion-input class="hcInputs" placeholder="Şifre" type="password"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8">
+          <ion-button routerLink="/home" class="hcButton">
+            Giriş Yap
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label routerLink="/forgotpassword" class="hcMorUl">Şifreni mi unttun?</ion-label>
+        </ion-col>
+        <ion-col size="12" style="margin-top: 5px;">
+          <ion-label class="hcTuruncuLabel">Hesabın yok mu?&ensp;</ion-label>
+          <ion-label routerLink="/register" class="hcMorUl">Kayıt Ol</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
-<ion-footer class="navigationButtons">
-    <a class="navButtons" href="https://www.facebook.com/hesapcini">
+<ion-footer class="hcFotter"  *ngIf="!keyboardVisible">
+    <a class="hcFooterButtons" href="https://www.facebook.com/hesapcini">
       <ion-icon class="icons" size="large" name="logo-facebook"></ion-icon>
     </a>
-    <a class="navButtons" href="https://www.instagram.com/hesapcini/">
+    <a class="hcFooterButtons" href="https://www.instagram.com/hesapcini/">
       <ion-icon class="icons" size="large"  name="logo-instagram"></ion-icon>
     </a>
-    <a class="navButtons" href="https://twitter.com/hesapcini">
+    <a class="hcFooterButtons" href="https://twitter.com/hesapcini">
       <ion-icon class="icons" size="large"  name="logo-twitter"></ion-icon>
     </a>
-    <a class="navButtons" href="https://www.youtube.com/channel/UClKF42WwP7UzGjtcXOpfx0g">
+    <a class="hcFooterButtons" href="https://www.youtube.com/channel/UClKF42WwP7UzGjtcXOpfx0g">
       <ion-icon class="icons" size="large"  name="logo-youtube"></ion-icon>
     </a>
 </ion-footer>

@@ -2,22 +2,36 @@
   <ion-card>
     <ion-card-content class="hcCardContent">
       <ion-row class="hcRows">
-        <ion-col class="bgM" style="max-width: 25px;justify-content: center;align-items: center;padding: 0%;margin: 0%;">
+        <ion-col class="bgM"
+          style="max-width: 25px;justify-content: center;align-items: center;padding: 0%;margin: 0%;">
           <ion-label class="hc-listfisNo" style="color:#fc9c1c;">&ensp;00000000000000000&ensp;</ion-label>
         </ion-col>
-        <ion-col>
-          <ion-row style="justify-content: center;">
-            <ion-col size="11" class="hcSatisCol" style="justify-content: space-between;">
+        <ion-col style="justify-content: center;display:flex;align-items:center" (click)="cariClick()">
+          <ion-row style="justify-content: center;align-items: center;width: 90%;position: absolute;top: 0%;left: 5%;">
+            <ion-col size="12" class="hcSatisCol"
+              style="justify-content: space-between;">
               <ion-label class="MpurpleB">Yasin Öztaş</ion-label>
               <ion-label class="SblackB">Bakiye: 0000$</ion-label>
             </ion-col>
-            <ion-col size="10" class="hcSatisCol ul" style="justify-content: space-between;">
-              <ion-label>Alış</ion-label>
-              <ion-label class="SblackB">0000$</ion-label>
+          </ion-row>
+          <ion-row style="width: 100%;">
+            <ion-col size="4" class="hcSatisCol">
+              <ion-label class="hc-listbaslik">Başlık</ion-label>
             </ion-col>
-            <ion-col size="10" class="hcSatisCol ul" style="justify-content: space-between;">
-              <ion-label>Satış</ion-label>
-              <ion-label class="SblackB">0000$</ion-label>
+            <ion-col size="4" class="hcSatisCol">
+              <ion-label class="hc-listbaslik">Başlık</ion-label>
+            </ion-col>
+            <ion-col size="4" class="hcSatisCol">
+              <ion-label class="hc-listbaslik">Başlık</ion-label>
+            </ion-col>
+            <ion-col size="4" class="hcSatisCol">
+              <ion-label class="hc-listicerik">içerik</ion-label>
+            </ion-col>
+            <ion-col size="4" class="hcSatisCol">
+              <ion-label class="hc-listicerik">içerik</ion-label>
+            </ion-col>
+            <ion-col size="4" class="hcSatisCol">
+              <ion-label class="hc-listicerik">içerik</ion-label>
             </ion-col>
           </ion-row>
         </ion-col>
@@ -25,7 +39,7 @@
       </ion-row>
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <!-- <ion-card>
     <ion-card-content class="hcCardContent">
       <div class="hcOutsideFrame">
         <div class="hc-listleftFrame">
@@ -84,5 +98,5 @@
         </div>
       </div>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
 </ion-content>

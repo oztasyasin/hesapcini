@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
+import { KeyboardDetectionService } from '../services/keyboard-detection.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -8,8 +9,9 @@ import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/n
 })
 export class RegisterPage implements OnInit {
 
-  constructor(private screenOrientation:ScreenOrientation, private http:HttpClient ) { }
-  logoSrc = "assets/images/hesapcini.png";
+  constructor(private screenOrientation:ScreenOrientation, private http:HttpClient,private keyboardService:KeyboardDetectionService, private cdr:ChangeDetectorRef ) { }
+  logoSrc = "assets/images/logo.svg";
+  keyboardVisible = false;
   ngOnInit() {
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
   }
@@ -32,6 +34,12 @@ export class RegisterPage implements OnInit {
     this.http.post("http://192.168.1.132:5000/api/auth/register",model,{headers:header}).subscribe((data:any)=>{
       console.log(data);
       
+    });
+  }
+    async ionViewDidEnter() {
+     this.keyboardService.keyboardStatus.subscribe(e => {
+      this.keyboardVisible = e;
+      this.cdr.detectChanges();
     });
   }
 }

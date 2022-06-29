@@ -9,6 +9,7 @@ import { PopoverCComponent } from '../popover-c/popover-c.component';
 export class TestPage implements OnInit {
 
   constructor(public popoverController: PopoverController) { }
+ 
   popoverData=[
     {
       title:"Düzenle",
@@ -36,7 +37,9 @@ export class TestPage implements OnInit {
     }
   ]
   state = false;
-  ngOnInit() {
+  bottom = 0;
+  bottomStr = "0%";
+  ngOnInit(): void {
     
   }
   async buttonClick(event:any){
@@ -61,5 +64,9 @@ export class TestPage implements OnInit {
   }
   iconClick(){
     console.log("icon");
+  }
+  bottomValue(){
+    this.bottom = this.bottom + 10
+    this.bottomStr = this.bottom + "%";
   }
 }
