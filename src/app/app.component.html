@@ -63,12 +63,9 @@
         </div>
       </div>
     </ion-content>
-    <ion-footer>
-      <div class="navigationButtons1" [style.height]="bottomBarHeight">
-        <div style="height: 50%;width:50%;display: flex;flex-direction: row;">
-          <ion-img class="logoLeft" [src]="logoL"></ion-img>
+    <ion-footer *ngIf="!keyboardVisible">
+      <div class="navigationButtons1" [style.height]="bottomBarHeight" >
           <ion-img class="logoRight" [src]="logoR"></ion-img>
-        </div>
       </div>
     </ion-footer>
   </ion-menu>

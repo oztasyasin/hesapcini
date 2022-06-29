@@ -621,6 +621,7 @@ ion-checkbox {
   border-top-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 .hc-listleftFrame {
@@ -1561,14 +1562,12 @@ ion-checkbox {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: white;
   }
   ion-row{
     height: fit-content;
     margin-top: 10px;
     justify-content: center;
     align-items: center;
-    background-color: white;
   }
 }
 .hcLogo{

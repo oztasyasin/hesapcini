@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Platform} from '@ionic/angular';
+import { KeyboardDetectionService } from './services/keyboard-detection.service';
 import { MenuicerikService } from './services/menuicerik.service';
 @Component({
   selector: 'app-root',
@@ -11,13 +12,15 @@ export class AppComponent implements OnInit {
   croppedLogo = 'assets/images/user.png';
   logoR = 'assets/images/logoyazisi.svg';
   logoL = 'assets/images/logoCircle.svg';
+  logo = 'assets/images/lgoyatayy.svg'
   pages = [];
   favoriler = [];
   img = "assets/images/icon-banka.svg"
   searchInput = ""
-  constructor(private platform:Platform, private islemService:MenuicerikService, private router:Router) { }
+  constructor(private platform:Platform, private islemService:MenuicerikService, private router:Router, private keyboardService:KeyboardDetectionService, private cdr:ChangeDetectorRef) { }
   bottomBarHeight = "";
   submenuState = true;
+  keyboardVisible = false;
   ngOnInit(): void {
     this.pages = this.islemService.getPages();
     this.favoriler = this.islemService.getFavoriler();
@@ -27,7 +30,17 @@ export class AppComponent implements OnInit {
     } else {
       this.bottomBarHeight = "57px";
     }
+    this.keyboardService.keyboardStatus.subscribe(e => {
+      this.keyboardVisible = e;
+      this.cdr.detectChanges();
+    });
   }
+  async ionViewDidEnter() {
+    this.keyboardService.keyboardStatus.subscribe(e => {
+     this.keyboardVisible = e;
+     this.cdr.detectChanges();
+   });
+ }
   textChange(text:any){
     this.searchInput = text;
     console.log("ksgdf");
