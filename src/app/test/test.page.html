@@ -1,14 +1,32 @@
 <ion-content>
-  <div class="container">
-    <ion-button (click) = "bottomValue()">
-        +
-    </ion-button>
-    <ion-button class="button1">
-      <div class="rightbottomDiv">
-        <div class="circle" [style.bottom] = "bottomStr">
-          
+  <ion-card>
+    <ion-card-content class="hcCardContent">
+      <div class="hc-listoutsideFrame" style="background-color:rgba(0,0,0,0.05);">
+        <div class="hc-listleftFrame" style="border-style:dashed;background-color:rgba(0,0,0,0.05);border-color: #6E2798;">
+        
+        </div>
+        <div class="hc-listmiddleFrame" style="margin: auto;width: 98%;border-width: 0px;">
+          <div class="hc-listtopFrame" style="margin-top: 5px;">
+            <ion-label class="hc-listcariAd" style="margin-left: 5px;">Çek Ödemesi</ion-label>
+         
+          </div>
+          <div class="hc-listfisInfoFrame" style="flex-direction: column;gap:10px;margin-top: 10px;">
+            <div class="hc-lines">
+              <ion-label class="hc-cekText">Portfoy No:</ion-label>
+              <ion-label class="hc-cekText" style="font-weight:bolder">00000000000000000</ion-label>
+            </div>
+            <div class="hc-lines">
+              <ion-label class="hc-cekText">Tutar:</ion-label>
+              <ion-label class="hc-cekText" style="font-weight:bolder">000$</ion-label>
+            </div>
+            <div class="hc-lines">
+              <ion-label class="hc-cekText">Vade Tarihi:</ion-label>
+              <ion-label class="hc-cekText" style="font-weight:bolder">00.00.0000</ion-label>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
         </div>
       </div>
-    </ion-button>
-  </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
