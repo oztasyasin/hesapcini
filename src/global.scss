@@ -759,21 +759,23 @@ ion-checkbox {
 .hc-listbaslik {
   height: 50%;
   display: flex;
+  font-size: small;
   justify-content: flex-end;
   align-items: flex-end;
-  font-size: small;
+  text-align: center;
   font-weight: 200;
   transition: 0.5s;
   color: black;
-  
+
 }
 
 .hc-listicerik {
   height: 50%;
+  display: flex;
   font-size: small;
   font-weight: bold;
   text-align: center;
-  display: flex;
+
   transition: 0.5s;
   color: black;
   justify-content: center;
@@ -1480,37 +1482,41 @@ ion-checkbox {
   margin: 0%;
   display: flex;
   justify-content: center;
-  align-items:center;
-  height:fit-content;
+  align-items: center;
+  height: fit-content;
   flex-wrap: nowrap;
   display: flex;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
 
-.hcRows{
+.hcRows {
   min-height: 100px;
   height: fit-content;
 }
 
-.bgM{
+.bgM {
   background-color: #6e2798;
 }
-.MpurpleB{
+
+.MpurpleB {
   color: #6e2798;
   font-size: medium;
   font-weight: bold;
 }
-.SblackB{
+
+.SblackB {
   color: black;
   font-size: small;
   font-weight: bold;
 }
-.ul{
+
+.ul {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: rgba(0, 0, 0, 0.1);
 }
-.button1{
+
+.button1 {
   display: flex;
   align-self: center;
   width: 200px;
@@ -1518,7 +1524,8 @@ ion-checkbox {
   margin: 0%;
   padding: 0%;
 }
-.rightbottomDiv{
+
+.rightbottomDiv {
   height: 50%;
   width: 3px;
   display: flex;
@@ -1529,14 +1536,16 @@ ion-checkbox {
   overflow: visible;
   justify-content: center;
 }
-.circle{
+
+.circle {
   height: 10px;
   width: 10px;
   border-radius: 10px;
   background-color: #6E2798;
   position: absolute;
 }
-.hcAlignCenter{
+
+.hcAlignCenter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1546,7 +1555,7 @@ ion-checkbox {
 
 
 //------------------------------------------------------------------------------
-.hcContent{
+.hcContent {
   height: 100%;
   width: 100%;
   align-items: center;
@@ -1556,30 +1565,34 @@ ion-checkbox {
   font-size: medium;
   font-weight: bold;
   background-color: white;
-  ion-col{
+
+  ion-col {
     padding: 0%;
     margin: 0%;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  ion-row{
+
+  ion-row {
     height: fit-content;
     margin-top: 10px;
     justify-content: center;
     align-items: center;
   }
 }
-.hcLogo{
+
+.hcLogo {
   width: 70%;
   display: flex;
   max-width: 200px;
   margin: auto;
 }
-.hcInputs{
+
+.hcInputs {
   display: flex;
   margin: auto;
-  width: clamp(280px,80%,350px);
+  width: clamp(280px, 80%, 350px);
   height: 45px;
   border-style: solid;
   border-width: 1px;
@@ -1587,44 +1600,49 @@ ion-checkbox {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-color:#fc9c1c;
+  border-color: #fc9c1c;
 }
 
-.hcinsideGrid{
+.hcinsideGrid {
   height: 80%;
   align-self: center;
   display: flex;
   aspect-ratio: 0.6;
   flex-direction: column;
   min-width: 300px;
-  gap:1px;
+  gap: 1px;
 }
-.hcButton{
+
+.hcButton {
   display: flex;
   margin: auto;
-  --background:#6E2798;
+  --background: #6E2798;
   text-transform: none;
-  width: clamp(220px,60%,300px);
+  width: clamp(220px, 60%, 300px);
 }
-.hcMorUl{
+
+.hcMorUl {
   color: #6e2798;
   text-decoration: underline;
 }
-.hcTuruncuLabel{
+
+.hcTuruncuLabel {
   color: #fc9c1c;
   font-weight: 400;
 }
-.hcBottomFrame{
+
+.hcBottomFrame {
   position: absolute;
   bottom: 0%;
   height: fit-content;
   width: 100%;
   z-index: 0;
 }
-.hcFotter{
+
+.hcFotter {
   border-style: solid;
   border-color: transparent;
-  border-top-color:#fc9c1c;
+  border-top-color: #fc9c1c;
   position: absolute;
   width: 100%;
   display: flex;
@@ -1638,7 +1656,58 @@ ion-checkbox {
   background-color: #6E2798;
   gap: 20px;
 }
-.hcFooterButtons{
+
+.hcFooterButtons {
   height: 40%;
   aspect-ratio: 1;
+}
+
+.hcRightContentFrame {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: end;
+}
+
+.hcColumnCenteredFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lines {
+  width: 90%;
+  margin-left: 5%;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgba(0,0,0,0.2);
+}
+.mt-10{
+}
+.band{
+  max-width: 25px;
+}
+.jc-e{
+  display: flex;
+  align-items: flex-end;
+}
+.fw-n{
+  font-weight:400;
+  margin-bottom: 2px;
+}
+.ai-s{
+  // align-items: flex-start;
+  justify-content: flex-start;
+}
+.centeredFrame{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.tW-1{
+  border-top-style: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,0.1);
 }
