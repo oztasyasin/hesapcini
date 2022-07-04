@@ -18,38 +18,118 @@
         </ion-col>
         <ion-col style="justify-content: center;display:flex;align-items:center" (click)="cariClick()">
           <ion-row style="justify-content: center;align-items: center;width: 90%;position: absolute;top: 5px;left: 5%;">
-            <ion-col size="12" class="hcSatisCol"
-              style="justify-content: space-between;">
+            <ion-col size="12" class="hcSatisCol" style="justify-content: space-between;">
               <ion-label class="MpurpleB">Yasin Öztaş</ion-label>
               <ion-label class="SblackB">Tarih: 00.00.0000</ion-label>
             </ion-col>
           </ion-row>
-          <ion-row style="width: 100%;">
-            <ion-col size="4" class="hcSatisCol">
-              <ion-label class="hc-listbaslik">Başlık</ion-label>
-            </ion-col>
-            <ion-col size="4" class="hcSatisCol">
-              <ion-label class="hc-listbaslik">Başlık</ion-label>
-            </ion-col>
-            <ion-col size="4" class="hcSatisCol">
-              <ion-label class="hc-listbaslik">Başlık</ion-label>
-            </ion-col>
-            <ion-col size="4" class="hcSatisCol">
-              <ion-label class="hc-listicerik">içerik</ion-label>
-            </ion-col>
-            <ion-col size="4" class="hcSatisCol">
-              <ion-label class="hc-listicerik">içerik</ion-label>
-            </ion-col>
-            <ion-col size="4" class="hcSatisCol">
-              <ion-label class="hc-listicerik">içerik</ion-label>
-            </ion-col>
+          <ion-row style="width: 100%;display: flex;flex-direction: column;">
+            <ion-row>
+              <ion-col class="hcSatisCol">
+                <ion-label class="hc-listbaslik">Başlık</ion-label>
+              </ion-col>
+              <ion-col class="hcSatisCol">
+                <ion-label class="hc-listbaslik">Başlık</ion-label>
+              </ion-col>
+              <ion-col class="hcSatisCol">
+                <ion-label class="hc-listbaslik">Başlık</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="hcSatisCol">
+                <ion-label class="hc-listicerik">içerik</ion-label>
+              </ion-col>
+              <ion-col class="hcSatisCol">
+                <ion-label class="hc-listicerik">içerik</ion-label>
+              </ion-col>
+              <ion-col class="hcSatisCol">
+                <ion-label class="hc-listicerik">içerik</ion-label>
+              </ion-col>
+            </ion-row>
           </ion-row>
         </ion-col>
-        <ion-col class="bgM" style="max-width: 20px;justify-content: center;align-items: center;display: flex;padding: 0%;margin: 0%;">
+        <ion-col class="bgM"
+          style="max-width: 20px;justify-content: center;align-items: center;display: flex;padding: 0%;margin: 0%;">
           <ion-icon class="hc-listoptions" name="ellipsis-vertical"></ion-icon>
         </ion-col>
       </ion-row>
     </ion-card-content>
+  </ion-card>
+  <ion-card class="tW-1">
+    <ion-row>
+      <!-- <ion-col class="band bgM">
+      </ion-col> -->
+      <ion-col class="ortaBolum" (click)="cariClick()">
+        <ion-row class="lines" style="border-width: 0px;">
+          <ion-col>
+            <ion-label class="hc-listcariAd">
+              Yasin Öztaş
+            </ion-label>
+          </ion-col>
+          <ion-col>
+            <div class="hcRightContentFrame">
+              <ion-label class="hc-listicerik">
+                Tarih: 00.00.0000
+              </ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="lines">
+          <ion-col size = "3.5" style="display: flex;overflow:visible">
+            <div class="hcRightContentFrame jc-e ai-s">
+              <ion-label class="hc-listicerik fw-n">
+                Fatura No:
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size ="8.5">
+            <div class="hcRightContentFrame jc-e">
+              <ion-label class="hc-listicerik" style="margin-bottom: 2px;">
+                0000000000000000
+              </ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="lines">
+          <ion-col size = "3" style="display: flex;overflow:visible">
+            <div class="hcRightContentFrame jc-e ai-s">
+              <ion-label class="hc-listicerik fw-n">
+                Ambar:
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size ="9">
+            <div class="hcRightContentFrame jc-e">
+              <ion-label class="hc-listicerik" style="margin-bottom: 2px;">
+                Merkez
+              </ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="lines">
+          <ion-col size = "3" style="display: flex;overflow:visible">
+            <div class="hcRightContentFrame jc-e ai-s">
+              <ion-label class="hc-listicerik fw-n">
+                Tutar:
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col size ="9">
+            <div class="hcRightContentFrame jc-e">
+              <ion-label class="hc-listicerik" style="margin-bottom: 2px;">
+                00000000000$
+              </ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col class="band bgM" (click)="openSettingsMenu($event,fis)">
+        <div class="centeredFrame">
+          <ion-icon class="hc-listoptions"  name="ellipsis-vertical"></ion-icon>
+        </div>
+        <!-- <ion-icon name="md-more"></ion-icon> -->
+      </ion-col>
+    </ion-row>
   </ion-card>
   <ion-card>
     <ion-card-content class="hcCardContent">

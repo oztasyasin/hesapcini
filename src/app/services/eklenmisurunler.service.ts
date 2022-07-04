@@ -15,7 +15,7 @@ export class EklenmisurunlerService {
       indirimOrani:0,
       promosyon:[
         {
-          title: "urun12asdasdasdfasdfasdfkjhaklsdjhfkasdhglaskjdfhasldkfjhaslkdfjhalsdkfh3",
+          title: "urun123",
         }
       ],
       indirimler:[

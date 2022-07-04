@@ -1,38 +1,21 @@
 <ion-header>
-  
+
 </ion-header>
 <ion-content>
-  <ion-card *ngFor="let bildirim of bildirimler;let i = index" style="background-color: transparent;">
-    <ion-card-content class="hcCardContent">
-      <ion-row style="padding:0%;margin: 0%;">
-        <ion-col size="2" class="bgM" style="margin: 0%;padding: 0%;max-width: 30px;justify-content: center;align-items: center;text-align: center;">
-          <ion-icon class="bildirimIcon" name="add" style="color: #fc9c1c" *ngIf="bildirim.tip"></ion-icon>
-          <ion-icon class="bildirimIcon" name="remove" style="color: #fc9c1c" *ngIf="!bildirim.tip"></ion-icon>
-        </ion-col>
-        <ion-col size="10" style="justify-content: center;display:flex;align-items: center;">
-          <ion-label> {{bildirim.description}} <br>{{bildirim.price}}₺</ion-label>
-        </ion-col>
-        <ion-col>
+  <ion-list style="padding: 0px;margin:0px">
+    <ion-item style="padding: 0px;margin:0px">
+      <ion-row style="height: 100%;">
+        <ion-col class="bgM" size="1" style="height: 100%">
 
+        </ion-col>
+        <ion-col size="11">
+          <ion-label>
+            Bildirim test text
+          </ion-label>
         </ion-col>
       </ion-row>
-    </ion-card-content>
-  </ion-card>
-  <div class="container">
-    <button (click)="bildirimClick(i)" class="bildirimOutsideFrame" *ngFor="let bildirim of bildirimler;let i = index" style="background-color: transparent;">
-      <div class="bildirimFrame">
-        <div class="iconFrame">
-          <ion-icon class="bildirimIcon" name="enter" *ngIf="bildirim.tip"></ion-icon>
-          <ion-icon class="bildirimIcon" name="exit" *ngIf="!bildirim.tip"></ion-icon>
-        </div>
-        <div class="descriptionFrame">
-          <ion-label> {{bildirim.description}} <br>{{bildirim.price}}₺</ion-label>
-        </div>
-        <div class="iconFrame" style="font-size: small;">
-          {{bildirim.days}} Gün
-        </div>
-      </div>
-    </button>
-
-  </div>
+      <ion-label>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
