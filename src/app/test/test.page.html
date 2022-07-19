@@ -1,5 +1,17 @@
 <ion-content>
-  <ion-card>
+  <div (click)="getCoordinates($event)" style="height: 300px;width:300px;background-color:red;border-radius: 50%;position: relative;;display: flex;justify-content: center;align-items: center;">
+    <div style="height: 90%;width:90%;background-color: white;border-radius: 50%;pointer-events: none;"></div>
+    <div [style.bottom]="y" [style.rigth]="x" style="height: 5%;aspect-ratio:1;background-color: green;position: absolute;border-radius: 50%;" >
+
+    </div>
+  </div>
+
+  <div style="height: 300px;width:300px;border-radius: 50%;position: relative;;display: flex;justify-content: center;align-items: center;border-style: solid;border-width: 10px;">
+    <div style="margin-top: 290px;height: 10px;aspect-ratio:1;background-color: green;border-radius: 50%;" >
+
+    </div>
+  </div>
+  <!-- <ion-card>
     <ion-card-content class="hcCardContent">
       <ion-row>
         <ion-col class="centeredBand">
@@ -160,11 +172,10 @@
               <ion-label>a</ion-label>
             </ion-col>
           </ion-row>
-          
         </ion-col>
         <ion-col class="centeredBand">
         </ion-col>
       </ion-row>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
 </ion-content>
